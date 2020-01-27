@@ -15,6 +15,13 @@
 		169F11B523A9A3CA0015E141 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169F11B323A9A3CA0015E141 /* LoginViewController.swift */; };
 		169F11B623A9A3CA0015E141 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 169F11B423A9A3CA0015E141 /* LoginViewController.xib */; };
 		33BF8FD923DF432600161D03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169872F6238D979C007DD7D1 /* ViewController.swift */; };
+		33BF8FE223DF463400161D03 /* EventosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF8FE023DF463400161D03 /* EventosViewController.swift */; };
+		33BF8FE323DF463400161D03 /* EventosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33BF8FE123DF463400161D03 /* EventosViewController.xib */; };
+		33BF8FE623DF465E00161D03 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF8FE423DF465E00161D03 /* TabBarViewController.swift */; };
+		33BF8FE723DF465E00161D03 /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33BF8FE523DF465E00161D03 /* TabBarViewController.xib */; };
+		33BF8FEA23DF471800161D03 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF8FE923DF471800161D03 /* Event.swift */; };
+		33BF8FED23DF4B5300161D03 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF8FEB23DF4B5300161D03 /* TableViewCell.swift */; };
+		33BF8FEE23DF4B5300161D03 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33BF8FEC23DF4B5300161D03 /* TableViewCell.xib */; };
 		C91CFE0861C2DE02EB2DA76C /* Pods_UF2Practica2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9782212BB399B5C75E7EC3B /* Pods_UF2Practica2.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +36,13 @@
 		16987306238D97D3007DD7D1 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		169F11B323A9A3CA0015E141 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		169F11B423A9A3CA0015E141 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		33BF8FE023DF463400161D03 /* EventosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventosViewController.swift; sourceTree = "<group>"; };
+		33BF8FE123DF463400161D03 /* EventosViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventosViewController.xib; sourceTree = "<group>"; };
+		33BF8FE423DF465E00161D03 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		33BF8FE523DF465E00161D03 /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
+		33BF8FE923DF471800161D03 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		33BF8FEB23DF4B5300161D03 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		33BF8FEC23DF4B5300161D03 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		971BE675AB4B03DF95163A84 /* Pods-UF2Practica2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UF2Practica2.debug.xcconfig"; path = "Target Support Files/Pods-UF2Practica2/Pods-UF2Practica2.debug.xcconfig"; sourceTree = "<group>"; };
 		B6ED757000FE631C2726F0AB /* Pods-UF2Practica2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UF2Practica2.release.xcconfig"; path = "Target Support Files/Pods-UF2Practica2/Pods-UF2Practica2.release.xcconfig"; sourceTree = "<group>"; };
 		F9782212BB399B5C75E7EC3B /* Pods_UF2Practica2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UF2Practica2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +89,7 @@
 		169872F1238D979C007DD7D1 /* UF2Practica2 */ = {
 			isa = PBXGroup;
 			children = (
+				33BF8FE823DF470700161D03 /* Model */,
 				169872F2238D979C007DD7D1 /* AppDelegate.swift */,
 				169872F4238D979C007DD7D1 /* SceneDelegate.swift */,
 				33BF8FD723DF40AC00161D03 /* VIew */,
@@ -89,6 +104,9 @@
 		33BF8FD723DF40AC00161D03 /* VIew */ = {
 			isa = PBXGroup;
 			children = (
+				33BF8FEC23DF4B5300161D03 /* TableViewCell.xib */,
+				33BF8FE523DF465E00161D03 /* TabBarViewController.xib */,
+				33BF8FE123DF463400161D03 /* EventosViewController.xib */,
 				16987306238D97D3007DD7D1 /* ViewController.xib */,
 				169F11B423A9A3CA0015E141 /* LoginViewController.xib */,
 			);
@@ -100,8 +118,19 @@
 			children = (
 				169F11B323A9A3CA0015E141 /* LoginViewController.swift */,
 				169872F6238D979C007DD7D1 /* ViewController.swift */,
+				33BF8FE023DF463400161D03 /* EventosViewController.swift */,
+				33BF8FE423DF465E00161D03 /* TabBarViewController.swift */,
+				33BF8FEB23DF4B5300161D03 /* TableViewCell.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		33BF8FE823DF470700161D03 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				33BF8FE923DF471800161D03 /* Event.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B406D5465DBCA687B3E8317B /* Pods */ = {
@@ -175,8 +204,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				169872FF238D979F007DD7D1 /* LaunchScreen.storyboard in Resources */,
+				33BF8FE323DF463400161D03 /* EventosViewController.xib in Resources */,
+				33BF8FEE23DF4B5300161D03 /* TableViewCell.xib in Resources */,
 				16987307238D97D3007DD7D1 /* ViewController.xib in Resources */,
 				169872FC238D979F007DD7D1 /* Assets.xcassets in Resources */,
+				33BF8FE723DF465E00161D03 /* TabBarViewController.xib in Resources */,
 				169F11B623A9A3CA0015E141 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,8 +280,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				169F11B523A9A3CA0015E141 /* LoginViewController.swift in Sources */,
+				33BF8FED23DF4B5300161D03 /* TableViewCell.swift in Sources */,
+				33BF8FE223DF463400161D03 /* EventosViewController.swift in Sources */,
 				169872F3238D979C007DD7D1 /* AppDelegate.swift in Sources */,
 				33BF8FD923DF432600161D03 /* ViewController.swift in Sources */,
+				33BF8FE623DF465E00161D03 /* TabBarViewController.swift in Sources */,
+				33BF8FEA23DF471800161D03 /* Event.swift in Sources */,
 				169872F5238D979C007DD7D1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
