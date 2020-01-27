@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		169872F3238D979C007DD7D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169872F2238D979C007DD7D1 /* AppDelegate.swift */; };
 		169872F5238D979C007DD7D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169872F4238D979C007DD7D1 /* SceneDelegate.swift */; };
-		169872F7238D979C007DD7D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169872F6238D979C007DD7D1 /* ViewController.swift */; };
 		169872FC238D979F007DD7D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 169872FB238D979F007DD7D1 /* Assets.xcassets */; };
 		169872FF238D979F007DD7D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 169872FD238D979F007DD7D1 /* LaunchScreen.storyboard */; };
 		16987307238D97D3007DD7D1 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16987306238D97D3007DD7D1 /* ViewController.xib */; };
 		169F11B523A9A3CA0015E141 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169F11B323A9A3CA0015E141 /* LoginViewController.swift */; };
 		169F11B623A9A3CA0015E141 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 169F11B423A9A3CA0015E141 /* LoginViewController.xib */; };
+		33BF8FD923DF432600161D03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169872F6238D979C007DD7D1 /* ViewController.swift */; };
 		C91CFE0861C2DE02EB2DA76C /* Pods_UF2Practica2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9782212BB399B5C75E7EC3B /* Pods_UF2Practica2.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,15 +77,31 @@
 			children = (
 				169872F2238D979C007DD7D1 /* AppDelegate.swift */,
 				169872F4238D979C007DD7D1 /* SceneDelegate.swift */,
-				16987306238D97D3007DD7D1 /* ViewController.xib */,
-				169872F6238D979C007DD7D1 /* ViewController.swift */,
+				33BF8FD723DF40AC00161D03 /* VIew */,
+				33BF8FD823DF40C600161D03 /* Controller */,
 				169872FB238D979F007DD7D1 /* Assets.xcassets */,
 				169872FD238D979F007DD7D1 /* LaunchScreen.storyboard */,
 				16987300238D979F007DD7D1 /* Info.plist */,
-				169F11B323A9A3CA0015E141 /* LoginViewController.swift */,
-				169F11B423A9A3CA0015E141 /* LoginViewController.xib */,
 			);
 			path = UF2Practica2;
+			sourceTree = "<group>";
+		};
+		33BF8FD723DF40AC00161D03 /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+				16987306238D97D3007DD7D1 /* ViewController.xib */,
+				169F11B423A9A3CA0015E141 /* LoginViewController.xib */,
+			);
+			path = VIew;
+			sourceTree = "<group>";
+		};
+		33BF8FD823DF40C600161D03 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				169F11B323A9A3CA0015E141 /* LoginViewController.swift */,
+				169872F6238D979C007DD7D1 /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		B406D5465DBCA687B3E8317B /* Pods */ = {
@@ -232,8 +248,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				169F11B523A9A3CA0015E141 /* LoginViewController.swift in Sources */,
-				169872F7238D979C007DD7D1 /* ViewController.swift in Sources */,
 				169872F3238D979C007DD7D1 /* AppDelegate.swift in Sources */,
+				33BF8FD923DF432600161D03 /* ViewController.swift in Sources */,
 				169872F5238D979C007DD7D1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
