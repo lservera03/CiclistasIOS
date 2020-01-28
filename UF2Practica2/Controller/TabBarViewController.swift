@@ -13,17 +13,23 @@ class TabBarViewController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+            
         
+        tabBar.backgroundColor = UIColor.red
         
         loadViews()
         self.selectedViewController = self.viewControllers?[0]
-        print("eventos")
     }
     
     func loadViews(){
         let event = EventosViewController()
+        event.tabBarItem = UITabBarItem(title: NSLocalizedString("Events", comment:""),image: UIImage(named: "Universal 1x"), tag:0)
+        _ = UINavigationController(rootViewController: event)
         
-        self.viewControllers = [event]
+        let ciclists = CiclistasTableViewController()
+        event.tabBarItem = UITabBarItem(title: NSLocalizedString("Ciclists", comment:""),image: UIImage(named: "Universal 1x"), tag:1)
+        _ = UINavigationController(rootViewController: ciclists)
+        self.viewControllers = [event, ciclists]
     }
 
 

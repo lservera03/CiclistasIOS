@@ -18,6 +18,7 @@ class EventosViewController: UIViewController, UITableViewDelegate, UITableViewD
             
         table.delegate = self
         table.dataSource = self
+        print("eventos")
         // Do any additional setup after loading the view.
     }
     
@@ -27,11 +28,8 @@ class EventosViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        print("celda")
-        let cell = tableView.dequeueReusableCell(withIdentifier: "eventcell", for: indexPath)
-                           as! TableViewCell
-        cell.label.text = "hola"
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "eventcell", for: indexPath) as! TableViewCell
+        cell.label.text = "prueba"
         
         return cell
     }

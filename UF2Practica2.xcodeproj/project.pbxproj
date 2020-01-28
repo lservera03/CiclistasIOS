@@ -22,6 +22,8 @@
 		33BF8FEA23DF471800161D03 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF8FE923DF471800161D03 /* Event.swift */; };
 		33BF8FED23DF4B5300161D03 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF8FEB23DF4B5300161D03 /* TableViewCell.swift */; };
 		33BF8FEE23DF4B5300161D03 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33BF8FEC23DF4B5300161D03 /* TableViewCell.xib */; };
+		33CC0CF123E0990B0029D085 /* CiclistasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CC0CEF23E0990B0029D085 /* CiclistasTableViewController.swift */; };
+		33CC0CF223E0990B0029D085 /* CiclistasTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CC0CF023E0990B0029D085 /* CiclistasTableViewController.xib */; };
 		C91CFE0861C2DE02EB2DA76C /* Pods_UF2Practica2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9782212BB399B5C75E7EC3B /* Pods_UF2Practica2.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,8 @@
 		33BF8FE923DF471800161D03 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		33BF8FEB23DF4B5300161D03 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		33BF8FEC23DF4B5300161D03 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		33CC0CEF23E0990B0029D085 /* CiclistasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CiclistasTableViewController.swift; sourceTree = "<group>"; };
+		33CC0CF023E0990B0029D085 /* CiclistasTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CiclistasTableViewController.xib; sourceTree = "<group>"; };
 		971BE675AB4B03DF95163A84 /* Pods-UF2Practica2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UF2Practica2.debug.xcconfig"; path = "Target Support Files/Pods-UF2Practica2/Pods-UF2Practica2.debug.xcconfig"; sourceTree = "<group>"; };
 		B6ED757000FE631C2726F0AB /* Pods-UF2Practica2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UF2Practica2.release.xcconfig"; path = "Target Support Files/Pods-UF2Practica2/Pods-UF2Practica2.release.xcconfig"; sourceTree = "<group>"; };
 		F9782212BB399B5C75E7EC3B /* Pods_UF2Practica2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UF2Practica2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -104,6 +108,7 @@
 		33BF8FD723DF40AC00161D03 /* VIew */ = {
 			isa = PBXGroup;
 			children = (
+				33CC0CF023E0990B0029D085 /* CiclistasTableViewController.xib */,
 				33BF8FEC23DF4B5300161D03 /* TableViewCell.xib */,
 				33BF8FE523DF465E00161D03 /* TabBarViewController.xib */,
 				33BF8FE123DF463400161D03 /* EventosViewController.xib */,
@@ -121,6 +126,7 @@
 				33BF8FE023DF463400161D03 /* EventosViewController.swift */,
 				33BF8FE423DF465E00161D03 /* TabBarViewController.swift */,
 				33BF8FEB23DF4B5300161D03 /* TableViewCell.swift */,
+				33CC0CEF23E0990B0029D085 /* CiclistasTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -204,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				169872FF238D979F007DD7D1 /* LaunchScreen.storyboard in Resources */,
+				33CC0CF223E0990B0029D085 /* CiclistasTableViewController.xib in Resources */,
 				33BF8FE323DF463400161D03 /* EventosViewController.xib in Resources */,
 				33BF8FEE23DF4B5300161D03 /* TableViewCell.xib in Resources */,
 				16987307238D97D3007DD7D1 /* ViewController.xib in Resources */,
@@ -280,6 +287,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				169F11B523A9A3CA0015E141 /* LoginViewController.swift in Sources */,
+				33CC0CF123E0990B0029D085 /* CiclistasTableViewController.swift in Sources */,
 				33BF8FED23DF4B5300161D03 /* TableViewCell.swift in Sources */,
 				33BF8FE223DF463400161D03 /* EventosViewController.swift in Sources */,
 				169872F3238D979C007DD7D1 /* AppDelegate.swift in Sources */,
