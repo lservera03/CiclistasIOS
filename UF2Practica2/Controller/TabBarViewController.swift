@@ -15,20 +15,27 @@ class TabBarViewController: UITabBarController {
         super.viewDidLoad()
             
         
-        tabBar.backgroundColor = UIColor.red
+        self.tabBar.backgroundColor = UIColor.red
         
         loadViews()
         self.selectedViewController = self.viewControllers?[0]
     }
     
     func loadViews(){
-        let event = EventosViewController()
-        event.tabBarItem = UITabBarItem(title: NSLocalizedString("Events", comment:""),image: UIImage(named: "Universal 1x"), tag:0)
-        _ = UINavigationController(rootViewController: event)
+        let event = EventsViewController()
+        let itemEvent = UITabBarItem()
+        itemEvent.title = "Events"
+        itemEvent.image = UIImage(named: "home_icon")
+        event.tabBarItem = itemEvent
         
-        let ciclists = CiclistasTableViewController()
-        event.tabBarItem = UITabBarItem(title: NSLocalizedString("Ciclists", comment:""),image: UIImage(named: "Universal 1x"), tag:1)
-        _ = UINavigationController(rootViewController: ciclists)
+        let ciclists = CiclistsViewController()
+        let itemCiclists = UITabBarItem()
+        itemCiclists.title = "Ciclists"
+        itemCiclists.image = UIImage(named: "home_icon")
+        ciclists.tabBarItem = itemCiclists
+        
+        
+        
         self.viewControllers = [event, ciclists]
     }
 

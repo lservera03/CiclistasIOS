@@ -15,15 +15,15 @@
 		169F11B523A9A3CA0015E141 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169F11B323A9A3CA0015E141 /* LoginViewController.swift */; };
 		169F11B623A9A3CA0015E141 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 169F11B423A9A3CA0015E141 /* LoginViewController.xib */; };
 		33BF8FD923DF432600161D03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169872F6238D979C007DD7D1 /* ViewController.swift */; };
-		33BF8FE223DF463400161D03 /* EventosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF8FE023DF463400161D03 /* EventosViewController.swift */; };
-		33BF8FE323DF463400161D03 /* EventosViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33BF8FE123DF463400161D03 /* EventosViewController.xib */; };
 		33BF8FE623DF465E00161D03 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF8FE423DF465E00161D03 /* TabBarViewController.swift */; };
 		33BF8FE723DF465E00161D03 /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33BF8FE523DF465E00161D03 /* TabBarViewController.xib */; };
 		33BF8FEA23DF471800161D03 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF8FE923DF471800161D03 /* Event.swift */; };
-		33BF8FED23DF4B5300161D03 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF8FEB23DF4B5300161D03 /* TableViewCell.swift */; };
-		33BF8FEE23DF4B5300161D03 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33BF8FEC23DF4B5300161D03 /* TableViewCell.xib */; };
-		33CC0CF123E0990B0029D085 /* CiclistasTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CC0CEF23E0990B0029D085 /* CiclistasTableViewController.swift */; };
-		33CC0CF223E0990B0029D085 /* CiclistasTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CC0CF023E0990B0029D085 /* CiclistasTableViewController.xib */; };
+		43ED187623E58C5A00C31CBA /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ED187423E58C5A00C31CBA /* EventsTableViewCell.swift */; };
+		43ED187723E58C5A00C31CBA /* EventsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43ED187523E58C5A00C31CBA /* EventsTableViewCell.xib */; };
+		43ED187A23E5908500C31CBA /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ED187823E5908500C31CBA /* EventsViewController.swift */; };
+		43ED187B23E5908500C31CBA /* EventsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43ED187923E5908500C31CBA /* EventsViewController.xib */; };
+		43ED187E23E590B400C31CBA /* CiclistsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ED187C23E590B400C31CBA /* CiclistsViewController.swift */; };
+		43ED187F23E590B400C31CBA /* CiclistsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43ED187D23E590B400C31CBA /* CiclistsViewController.xib */; };
 		C91CFE0861C2DE02EB2DA76C /* Pods_UF2Practica2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9782212BB399B5C75E7EC3B /* Pods_UF2Practica2.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,15 +38,15 @@
 		16987306238D97D3007DD7D1 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		169F11B323A9A3CA0015E141 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		169F11B423A9A3CA0015E141 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		33BF8FE023DF463400161D03 /* EventosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventosViewController.swift; sourceTree = "<group>"; };
-		33BF8FE123DF463400161D03 /* EventosViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventosViewController.xib; sourceTree = "<group>"; };
 		33BF8FE423DF465E00161D03 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		33BF8FE523DF465E00161D03 /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
 		33BF8FE923DF471800161D03 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
-		33BF8FEB23DF4B5300161D03 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		33BF8FEC23DF4B5300161D03 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
-		33CC0CEF23E0990B0029D085 /* CiclistasTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CiclistasTableViewController.swift; sourceTree = "<group>"; };
-		33CC0CF023E0990B0029D085 /* CiclistasTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CiclistasTableViewController.xib; sourceTree = "<group>"; };
+		43ED187423E58C5A00C31CBA /* EventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
+		43ED187523E58C5A00C31CBA /* EventsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsTableViewCell.xib; sourceTree = "<group>"; };
+		43ED187823E5908500C31CBA /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
+		43ED187923E5908500C31CBA /* EventsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsViewController.xib; sourceTree = "<group>"; };
+		43ED187C23E590B400C31CBA /* CiclistsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CiclistsViewController.swift; sourceTree = "<group>"; };
+		43ED187D23E590B400C31CBA /* CiclistsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CiclistsViewController.xib; sourceTree = "<group>"; };
 		971BE675AB4B03DF95163A84 /* Pods-UF2Practica2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UF2Practica2.debug.xcconfig"; path = "Target Support Files/Pods-UF2Practica2/Pods-UF2Practica2.debug.xcconfig"; sourceTree = "<group>"; };
 		B6ED757000FE631C2726F0AB /* Pods-UF2Practica2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UF2Practica2.release.xcconfig"; path = "Target Support Files/Pods-UF2Practica2/Pods-UF2Practica2.release.xcconfig"; sourceTree = "<group>"; };
 		F9782212BB399B5C75E7EC3B /* Pods_UF2Practica2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UF2Practica2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,10 +108,10 @@
 		33BF8FD723DF40AC00161D03 /* VIew */ = {
 			isa = PBXGroup;
 			children = (
-				33CC0CF023E0990B0029D085 /* CiclistasTableViewController.xib */,
-				33BF8FEC23DF4B5300161D03 /* TableViewCell.xib */,
+				43ED187D23E590B400C31CBA /* CiclistsViewController.xib */,
+				43ED187923E5908500C31CBA /* EventsViewController.xib */,
+				43ED187523E58C5A00C31CBA /* EventsTableViewCell.xib */,
 				33BF8FE523DF465E00161D03 /* TabBarViewController.xib */,
-				33BF8FE123DF463400161D03 /* EventosViewController.xib */,
 				16987306238D97D3007DD7D1 /* ViewController.xib */,
 				169F11B423A9A3CA0015E141 /* LoginViewController.xib */,
 			);
@@ -123,10 +123,10 @@
 			children = (
 				169F11B323A9A3CA0015E141 /* LoginViewController.swift */,
 				169872F6238D979C007DD7D1 /* ViewController.swift */,
-				33BF8FE023DF463400161D03 /* EventosViewController.swift */,
 				33BF8FE423DF465E00161D03 /* TabBarViewController.swift */,
-				33BF8FEB23DF4B5300161D03 /* TableViewCell.swift */,
-				33CC0CEF23E0990B0029D085 /* CiclistasTableViewController.swift */,
+				43ED187423E58C5A00C31CBA /* EventsTableViewCell.swift */,
+				43ED187823E5908500C31CBA /* EventsViewController.swift */,
+				43ED187C23E590B400C31CBA /* CiclistsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -209,10 +209,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43ED187F23E590B400C31CBA /* CiclistsViewController.xib in Resources */,
+				43ED187723E58C5A00C31CBA /* EventsTableViewCell.xib in Resources */,
+				43ED187B23E5908500C31CBA /* EventsViewController.xib in Resources */,
 				169872FF238D979F007DD7D1 /* LaunchScreen.storyboard in Resources */,
-				33CC0CF223E0990B0029D085 /* CiclistasTableViewController.xib in Resources */,
-				33BF8FE323DF463400161D03 /* EventosViewController.xib in Resources */,
-				33BF8FEE23DF4B5300161D03 /* TableViewCell.xib in Resources */,
 				16987307238D97D3007DD7D1 /* ViewController.xib in Resources */,
 				169872FC238D979F007DD7D1 /* Assets.xcassets in Resources */,
 				33BF8FE723DF465E00161D03 /* TabBarViewController.xib in Resources */,
@@ -286,14 +286,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43ED187E23E590B400C31CBA /* CiclistsViewController.swift in Sources */,
 				169F11B523A9A3CA0015E141 /* LoginViewController.swift in Sources */,
-				33CC0CF123E0990B0029D085 /* CiclistasTableViewController.swift in Sources */,
-				33BF8FED23DF4B5300161D03 /* TableViewCell.swift in Sources */,
-				33BF8FE223DF463400161D03 /* EventosViewController.swift in Sources */,
+				43ED187A23E5908500C31CBA /* EventsViewController.swift in Sources */,
 				169872F3238D979C007DD7D1 /* AppDelegate.swift in Sources */,
 				33BF8FD923DF432600161D03 /* ViewController.swift in Sources */,
 				33BF8FE623DF465E00161D03 /* TabBarViewController.swift in Sources */,
 				33BF8FEA23DF471800161D03 /* Event.swift in Sources */,
+				43ED187623E58C5A00C31CBA /* EventsTableViewCell.swift in Sources */,
 				169872F5238D979C007DD7D1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +433,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UF2Practica2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,6 +452,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = UF2Practica2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
