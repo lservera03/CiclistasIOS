@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventsViewController" customModule="UF2Practica2" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="0Vl-Hi-ESI" id="V9P-Nc-g6N"/>
+                <outlet property="tableView" destination="LDa-7H-EWh" id="NWW-mV-DNv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -18,13 +18,26 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0Vl-Hi-ESI">
-                    <rect key="frame" x="0.0" y="0.0" width="455" height="896"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LDa-7H-EWh">
+                    <rect key="frame" x="0.0" y="20" width="414" height="856"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
+                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" translatesAutoresizingMaskIntoConstraints="NO" id="9Ij-5K-JYb" customClass="EventsTableViewCell" customModule="UF2Practica2" customModuleProvider="target">
+                    <rect key="frame" x="9" y="181" width="414" height="44"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Ij-5K-JYb" id="o7V-2t-l5t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </tableViewCellContentView>
+                </tableViewCell>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="LDa-7H-EWh" secondAttribute="bottom" constant="20" symbolic="YES" id="1jv-Iu-m65"/>
+                <constraint firstItem="LDa-7H-EWh" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ImV-wF-m6P"/>
+                <constraint firstItem="LDa-7H-EWh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" symbolic="YES" id="nJE-hI-5f3"/>
+                <constraint firstItem="LDa-7H-EWh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xZN-EG-bs7"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="131.8840579710145" y="131.91964285714286"/>
         </view>

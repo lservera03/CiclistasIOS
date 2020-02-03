@@ -6,6 +6,7 @@ target 'UF2Practica2' do
   use_frameworks!
 
   pod 'GoogleSignIn'
+  pod 'RealmSwift'
   # Pods for UF2Practica2
 
 end

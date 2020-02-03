@@ -14,10 +14,17 @@
 		16987307238D97D3007DD7D1 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16987306238D97D3007DD7D1 /* ViewController.xib */; };
 		169F11B523A9A3CA0015E141 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169F11B323A9A3CA0015E141 /* LoginViewController.swift */; };
 		169F11B623A9A3CA0015E141 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 169F11B423A9A3CA0015E141 /* LoginViewController.xib */; };
+		3351FE6723E8758100B104CD /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3351FE6623E8758100B104CD /* Event.swift */; };
 		33BF8FD923DF432600161D03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169872F6238D979C007DD7D1 /* ViewController.swift */; };
 		33BF8FE623DF465E00161D03 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF8FE423DF465E00161D03 /* TabBarViewController.swift */; };
 		33BF8FE723DF465E00161D03 /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33BF8FE523DF465E00161D03 /* TabBarViewController.xib */; };
-		33BF8FEA23DF471800161D03 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF8FE923DF471800161D03 /* Event.swift */; };
+		33FAE67723E879F10044631F /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE67623E879F10044631F /* Country.swift */; };
+		33FAE67B23E87CC90044631F /* Specialty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE67A23E87CC90044631F /* Specialty.swift */; };
+		33FAE67D23E87D030044631F /* Cyclist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE67C23E87D030044631F /* Cyclist.swift */; };
+		33FAE67F23E87D410044631F /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE67E23E87D410044631F /* Team.swift */; };
+		33FAE68123E87FB00044631F /* TeamRace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE68023E87FB00044631F /* TeamRace.swift */; };
+		33FAE68323E8801B0044631F /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE68223E8801B0044631F /* Stage.swift */; };
+		33FAE68523E880E80044631F /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE68423E880E80044631F /* DBManager.swift */; };
 		43ED187623E58C5A00C31CBA /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ED187423E58C5A00C31CBA /* EventsTableViewCell.swift */; };
 		43ED187723E58C5A00C31CBA /* EventsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43ED187523E58C5A00C31CBA /* EventsTableViewCell.xib */; };
 		43ED187A23E5908500C31CBA /* EventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ED187823E5908500C31CBA /* EventsViewController.swift */; };
@@ -38,9 +45,16 @@
 		16987306238D97D3007DD7D1 /* ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 		169F11B323A9A3CA0015E141 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		169F11B423A9A3CA0015E141 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		3351FE6623E8758100B104CD /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		33BF8FE423DF465E00161D03 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		33BF8FE523DF465E00161D03 /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
-		33BF8FE923DF471800161D03 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		33FAE67623E879F10044631F /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		33FAE67A23E87CC90044631F /* Specialty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specialty.swift; sourceTree = "<group>"; };
+		33FAE67C23E87D030044631F /* Cyclist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cyclist.swift; sourceTree = "<group>"; };
+		33FAE67E23E87D410044631F /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		33FAE68023E87FB00044631F /* TeamRace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamRace.swift; sourceTree = "<group>"; };
+		33FAE68223E8801B0044631F /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
+		33FAE68423E880E80044631F /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		43ED187423E58C5A00C31CBA /* EventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
 		43ED187523E58C5A00C31CBA /* EventsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventsTableViewCell.xib; sourceTree = "<group>"; };
 		43ED187823E5908500C31CBA /* EventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsViewController.swift; sourceTree = "<group>"; };
@@ -134,7 +148,14 @@
 		33BF8FE823DF470700161D03 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				33BF8FE923DF471800161D03 /* Event.swift */,
+				3351FE6623E8758100B104CD /* Event.swift */,
+				33FAE67623E879F10044631F /* Country.swift */,
+				33FAE67A23E87CC90044631F /* Specialty.swift */,
+				33FAE67C23E87D030044631F /* Cyclist.swift */,
+				33FAE67E23E87D410044631F /* Team.swift */,
+				33FAE68023E87FB00044631F /* TeamRace.swift */,
+				33FAE68223E8801B0044631F /* Stage.swift */,
+				33FAE68423E880E80044631F /* DBManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -287,14 +308,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				43ED187E23E590B400C31CBA /* CiclistsViewController.swift in Sources */,
+				3351FE6723E8758100B104CD /* Event.swift in Sources */,
+				33FAE67F23E87D410044631F /* Team.swift in Sources */,
 				169F11B523A9A3CA0015E141 /* LoginViewController.swift in Sources */,
 				43ED187A23E5908500C31CBA /* EventsViewController.swift in Sources */,
 				169872F3238D979C007DD7D1 /* AppDelegate.swift in Sources */,
 				33BF8FD923DF432600161D03 /* ViewController.swift in Sources */,
+				33FAE68123E87FB00044631F /* TeamRace.swift in Sources */,
 				33BF8FE623DF465E00161D03 /* TabBarViewController.swift in Sources */,
-				33BF8FEA23DF471800161D03 /* Event.swift in Sources */,
+				33FAE68323E8801B0044631F /* Stage.swift in Sources */,
 				43ED187623E58C5A00C31CBA /* EventsTableViewCell.swift in Sources */,
+				33FAE68523E880E80044631F /* DBManager.swift in Sources */,
+				33FAE67723E879F10044631F /* Country.swift in Sources */,
 				169872F5238D979C007DD7D1 /* SceneDelegate.swift in Sources */,
+				33FAE67B23E87CC90044631F /* Specialty.swift in Sources */,
+				33FAE67D23E87D030044631F /* Cyclist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
