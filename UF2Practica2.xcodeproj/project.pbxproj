@@ -18,7 +18,6 @@
 		33BF8FD923DF432600161D03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169872F6238D979C007DD7D1 /* ViewController.swift */; };
 		33BF8FE623DF465E00161D03 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF8FE423DF465E00161D03 /* TabBarViewController.swift */; };
 		33BF8FE723DF465E00161D03 /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33BF8FE523DF465E00161D03 /* TabBarViewController.xib */; };
-		33FAE67723E879F10044631F /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE67623E879F10044631F /* Country.swift */; };
 		33FAE67B23E87CC90044631F /* Specialty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE67A23E87CC90044631F /* Specialty.swift */; };
 		33FAE67D23E87D030044631F /* Cyclist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE67C23E87D030044631F /* Cyclist.swift */; };
 		33FAE67F23E87D410044631F /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE67E23E87D410044631F /* Team.swift */; };
@@ -48,7 +47,6 @@
 		3351FE6623E8758100B104CD /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		33BF8FE423DF465E00161D03 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		33BF8FE523DF465E00161D03 /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
-		33FAE67623E879F10044631F /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		33FAE67A23E87CC90044631F /* Specialty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specialty.swift; sourceTree = "<group>"; };
 		33FAE67C23E87D030044631F /* Cyclist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cyclist.swift; sourceTree = "<group>"; };
 		33FAE67E23E87D410044631F /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				3351FE6623E8758100B104CD /* Event.swift */,
-				33FAE67623E879F10044631F /* Country.swift */,
 				33FAE67A23E87CC90044631F /* Specialty.swift */,
 				33FAE67C23E87D030044631F /* Cyclist.swift */,
 				33FAE67E23E87D410044631F /* Team.swift */,
@@ -319,7 +316,6 @@
 				33FAE68323E8801B0044631F /* Stage.swift in Sources */,
 				43ED187623E58C5A00C31CBA /* EventsTableViewCell.swift in Sources */,
 				33FAE68523E880E80044631F /* DBManager.swift in Sources */,
-				33FAE67723E879F10044631F /* Country.swift in Sources */,
 				169872F5238D979C007DD7D1 /* SceneDelegate.swift in Sources */,
 				33FAE67B23E87CC90044631F /* Specialty.swift in Sources */,
 				33FAE67D23E87D030044631F /* Cyclist.swift in Sources */,

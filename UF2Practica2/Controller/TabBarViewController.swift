@@ -18,7 +18,6 @@ class TabBarViewController: UITabBarController {
         self.tabBar.backgroundColor = UIColor.red
         
         loadViews()
-        loadCountries()
         loadEvents()
         
         self.selectedViewController = self.viewControllers?[0]
@@ -41,19 +40,10 @@ class TabBarViewController: UITabBarController {
         self.viewControllers = [event, ciclists]
     }
     
-    func loadCountries() {
-        print("cargando paises")
-        DBManager.sharedInstance.addData(object: Country(id: 1, name: "ESP"))
-        DBManager.sharedInstance.addData(object: Country(id: 2, name: "GBR"))
-        DBManager.sharedInstance.addData(object: Country(id: 3, name: "FRA"))
-    }
-    
     
     func loadEvents(){
         print("cargando eventos")
-        DBManager.sharedInstance.addData(object: Event(id: 1, country: DBManager.sharedInstance.getCountryById(id: 1), name: "Vuelta España", popularity: 10, numberStage: 2, stageKm: 23))
-        
-        
+        DBManager.sharedInstance.addData(object: Event(id: 1, country: "Espana", name: "Vuelta España", popularity: 10, numberStage: 2, stageKm: 23))
     }
 
 

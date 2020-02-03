@@ -14,12 +14,12 @@ import RealmSwift
 class Team: Object{
     
     @objc dynamic var id: Int = 0
-    @objc dynamic var country: Country? = Country()
+    @objc dynamic var country: String = ""
     @objc dynamic var name: String = ""
     @objc dynamic var manager: String = ""
     
     
-    convenience init(id: Int, country: Country, name: String, manager: String){
+    convenience init(id: Int, country: String, name: String, manager: String){
         self.init()
         
         self.id = id

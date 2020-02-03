@@ -66,10 +66,7 @@ class DBManager {
   func getEvents() -> Results<Event>? {
           return database?.objects(Event.self)
   }
-    
-  func getCountryById(id: Int) -> Country{
-        return (database?.object(ofType: Country.self, forPrimaryKey: id))!
-  }
+  
     
     
 }

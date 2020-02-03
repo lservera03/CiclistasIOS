@@ -15,7 +15,7 @@ class Cyclist: Object{
     
     @objc dynamic var id: Int = 0
     @objc dynamic var team: Team? = Team()
-    @objc dynamic var country: Country? = Country()
+    @objc dynamic var country: String = ""
     @objc dynamic var specialty: Specialty? = Specialty()
     @objc dynamic var lastName: String = ""
     @objc dynamic var firstName: String = ""
@@ -33,7 +33,7 @@ class Cyclist: Object{
     @objc dynamic var timeTrial: Int = 0
     
     
-    convenience init(id: Int, team: Team, country: Country, specialty: Specialty, lastName: String,
+    convenience init(id: Int, team: Team, country: String, specialty: Specialty, lastName: String,
                      firstName: String, birthDate: Date, popularity:Int, leader:Bool, size: Double, weight: Double, mountain: Int, plain: Int, downhilling: Int, sprint: Int, resistance: Int, recuperation: Int, timeTrial: Int){
         
         self.init()

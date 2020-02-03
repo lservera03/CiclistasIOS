@@ -12,7 +12,7 @@ import RealmSwift
 class Event: Object{
     
     @objc dynamic var id: Int = 0
-    @objc dynamic var country: Country? = Country()
+    @objc dynamic var country: String = ""
     @objc dynamic var name: String = ""
     @objc dynamic var popularity: Int = 0
     @objc dynamic var numberStage: Int = 0
@@ -23,7 +23,7 @@ class Event: Object{
         return "id"
     }
     
-    convenience init(id: Int, country: Country, name: String, popularity: Int, numberStage: Int, stageKm: Int){
+    convenience init(id: Int, country: String, name: String, popularity: Int, numberStage: Int, stageKm: Int){
         self.init()
         
         self.id = id
