@@ -18,6 +18,8 @@
 		33BF8FD923DF432600161D03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169872F6238D979C007DD7D1 /* ViewController.swift */; };
 		33BF8FE623DF465E00161D03 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BF8FE423DF465E00161D03 /* TabBarViewController.swift */; };
 		33BF8FE723DF465E00161D03 /* TabBarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33BF8FE523DF465E00161D03 /* TabBarViewController.xib */; };
+		33F850A323E9F79D00C5D599 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F850A123E9F79D00C5D599 /* UserDetailViewController.swift */; };
+		33F850A423E9F79D00C5D599 /* UserDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33F850A223E9F79D00C5D599 /* UserDetailViewController.xib */; };
 		33FAE67B23E87CC90044631F /* Specialty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE67A23E87CC90044631F /* Specialty.swift */; };
 		33FAE67D23E87D030044631F /* Cyclist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE67C23E87D030044631F /* Cyclist.swift */; };
 		33FAE67F23E87D410044631F /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE67E23E87D410044631F /* Team.swift */; };
@@ -47,6 +49,8 @@
 		3351FE6623E8758100B104CD /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		33BF8FE423DF465E00161D03 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		33BF8FE523DF465E00161D03 /* TabBarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarViewController.xib; sourceTree = "<group>"; };
+		33F850A123E9F79D00C5D599 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		33F850A223E9F79D00C5D599 /* UserDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserDetailViewController.xib; sourceTree = "<group>"; };
 		33FAE67A23E87CC90044631F /* Specialty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Specialty.swift; sourceTree = "<group>"; };
 		33FAE67C23E87D030044631F /* Cyclist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cyclist.swift; sourceTree = "<group>"; };
 		33FAE67E23E87D410044631F /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 		33BF8FD723DF40AC00161D03 /* VIew */ = {
 			isa = PBXGroup;
 			children = (
+				33F850A223E9F79D00C5D599 /* UserDetailViewController.xib */,
 				43ED187D23E590B400C31CBA /* CiclistsViewController.xib */,
 				43ED187923E5908500C31CBA /* EventsViewController.xib */,
 				43ED187523E58C5A00C31CBA /* EventsTableViewCell.xib */,
@@ -133,6 +138,7 @@
 		33BF8FD823DF40C600161D03 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				33F850A123E9F79D00C5D599 /* UserDetailViewController.swift */,
 				169F11B323A9A3CA0015E141 /* LoginViewController.swift */,
 				169872F6238D979C007DD7D1 /* ViewController.swift */,
 				33BF8FE423DF465E00161D03 /* TabBarViewController.swift */,
@@ -229,6 +235,7 @@
 			files = (
 				43ED187F23E590B400C31CBA /* CiclistsViewController.xib in Resources */,
 				43ED187723E58C5A00C31CBA /* EventsTableViewCell.xib in Resources */,
+				33F850A423E9F79D00C5D599 /* UserDetailViewController.xib in Resources */,
 				43ED187B23E5908500C31CBA /* EventsViewController.xib in Resources */,
 				169872FF238D979F007DD7D1 /* LaunchScreen.storyboard in Resources */,
 				16987307238D97D3007DD7D1 /* ViewController.xib in Resources */,
@@ -314,6 +321,7 @@
 				33FAE68123E87FB00044631F /* TeamRace.swift in Sources */,
 				33BF8FE623DF465E00161D03 /* TabBarViewController.swift in Sources */,
 				33FAE68323E8801B0044631F /* Stage.swift in Sources */,
+				33F850A323E9F79D00C5D599 /* UserDetailViewController.swift in Sources */,
 				43ED187623E58C5A00C31CBA /* EventsTableViewCell.swift in Sources */,
 				33FAE68523E880E80044631F /* DBManager.swift in Sources */,
 				169872F5238D979C007DD7D1 /* SceneDelegate.swift in Sources */,
