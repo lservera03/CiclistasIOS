@@ -42,8 +42,8 @@ class TabBarViewController: UITabBarController {
     
     
     func loadEvents(){
-        print("cargando eventos")
         DBManager.sharedInstance.addData(object: Event(country: "Espana", name: "Vuelta España", popularity: 10, numberStage: 2, stageKm: 23))
+        DBManager.sharedInstance.addData(object: Event(country: "Francia", name: "Tour de France", popularity: 30, numberStage: 2, stageKm: 23))
     }
 
 
