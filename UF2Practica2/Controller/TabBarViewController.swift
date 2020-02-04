@@ -18,6 +18,8 @@ class TabBarViewController: UITabBarController {
         self.tabBar.backgroundColor = UIColor.red
         
         loadViews()
+        loadEvents()
+        
         self.selectedViewController = self.viewControllers?[0]
     }
     
@@ -35,8 +37,13 @@ class TabBarViewController: UITabBarController {
         ciclists.tabBarItem = itemCiclists
         
         
-        
         self.viewControllers = [event, ciclists]
+    }
+    
+    
+    func loadEvents(){
+        print("cargando eventos")
+        DBManager.sharedInstance.addData(object: Event(country: "Espana", name: "Vuelta España", popularity: 10, numberStage: 2, stageKm: 23))
     }
 
 

@@ -7,35 +7,47 @@
 //
 
 import UIKit
+import RealmSwift
 
 class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
-   
-    
 
     @IBOutlet weak var tableView: UITableView!
+    var list: Results<Event>? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.register(EventsTableViewCell.self, forCellReuseIdentifier: "eventcell")
+        tableView.register(UINib(nibName: "EventsTableViewCell", bundle: nil), forCellReuseIdentifier: "eventCell")
+        loadData()
     }
 
+    
+    func loadData(){
+        if (!DBManager.sharedInstance.getEvents()!.isEmpty){
+            list = DBManager.sharedInstance.getEvents()!
+        }
+        
+    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-          return 1
+        return list!.count
     }
       
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //tableView.register(EventsTableViewCell.self, forCellReuseIdentifier: "eventcell")
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "eventcell", for: indexPath) as! EventsTableViewCell
-        
-        cell.name?.text = "Hola"
-        //cell.popularity.text = "Mucha"
+        let event: Event = list![indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell") as! EventsTableViewCell
+        cell.eventImage.image = UIImage(named: "bici")
+        cell.eventName.text = event.name
+        cell.eventPopularity.text = String(event.popularity)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
     }
 
 }

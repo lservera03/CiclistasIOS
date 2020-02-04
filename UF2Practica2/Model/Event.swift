@@ -2,26 +2,36 @@
 //  Event.swift
 //  UF2Practica2
 //
-//  Created by dam on 27/01/2020.
+//  Created by dam on 03/02/2020.
 //  Copyright © 2020 DAM2T. All rights reserved.
 //
 
 import Foundation
-import UIKit
+import RealmSwift
 
-
-class Event{
+class Event: Object{
+    
+    //@objc dynamic var id: Int = 0
+    @objc dynamic var country: String = ""
+    @objc dynamic var name: String = ""
+    @objc dynamic var popularity: Int = 0
+    @objc dynamic var numberStage: Int = 0
+    @objc dynamic var stageKm: Int = 0
     
     
-    var name: String
-    var image: UIImage
-    var popularity: Int
+    //override class func primaryKey() -> String? {
+      //  return "id"
+    //}
     
-    init(name: String, image: UIImage, popularity: Int){
-        self.image = image
-        self.popularity = popularity
+    convenience init(country: String, name: String, popularity: Int, numberStage: Int, stageKm: Int){
+        self.init()
+        
+        //self.id = id
+        self.country = country
         self.name = name
+        self.popularity = popularity
+        self.numberStage = numberStage
+        self.stageKm = stageKm        
     }
-    
     
 }
