@@ -11,7 +11,7 @@ import RealmSwift
 
 class Event: Object{
     
-    @objc dynamic var id: Int = 0
+    //@objc dynamic var id: Int = 0
     @objc dynamic var country: String = ""
     @objc dynamic var name: String = ""
     @objc dynamic var popularity: Int = 0
@@ -19,14 +19,14 @@ class Event: Object{
     @objc dynamic var stageKm: Int = 0
     
     
-    override class func primaryKey() -> String? {
-        return "id"
-    }
+    //override class func primaryKey() -> String? {
+      //  return "id"
+    //}
     
-    convenience init(id: Int, country: String, name: String, popularity: Int, numberStage: Int, stageKm: Int){
+    convenience init(country: String, name: String, popularity: Int, numberStage: Int, stageKm: Int){
         self.init()
         
-        self.id = id
+        //self.id = id
         self.country = country
         self.name = name
         self.popularity = popularity
