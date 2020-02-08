@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="146" id="KGk-i7-Jjw" customClass="CyclistsTableViewCell" customModule="UF2Practica2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="399" height="146"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="399" height="146"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gVD-An-W5M">
+                        <rect key="frame" x="13" y="9" width="120" height="110"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zwc-16-8jJ">
+                        <rect key="frame" x="159" y="43" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="anM-au-TI9">
+                        <rect key="frame" x="301" y="43" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E9u-30-ogI">
+                        <rect key="frame" x="224" y="88" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Zwc-16-8jJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="19" id="0UC-4T-rdL"/>
+                    <constraint firstItem="anM-au-TI9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="54" id="AA3-f5-uHR"/>
+                    <constraint firstItem="gVD-An-W5M" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="FB9-bD-B9c"/>
+                    <constraint firstItem="Zwc-16-8jJ" firstAttribute="leading" secondItem="gVD-An-W5M" secondAttribute="trailing" constant="27" id="G7q-KQ-mmf"/>
+                    <constraint firstItem="Zwc-16-8jJ" firstAttribute="leading" secondItem="gVD-An-W5M" secondAttribute="trailing" constant="65" id="K9h-LE-OgO"/>
+                    <constraint firstItem="gVD-An-W5M" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="13" id="THn-cD-ede"/>
+                    <constraint firstItem="anM-au-TI9" firstAttribute="leading" secondItem="E9u-30-ogI" secondAttribute="trailing" constant="51" id="arZ-v3-eBy"/>
+                    <constraint firstItem="E9u-30-ogI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="27" id="paQ-z2-oPD"/>
+                    <constraint firstItem="Zwc-16-8jJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="48" id="saz-N3-K6f"/>
+                    <constraint firstItem="E9u-30-ogI" firstAttribute="leading" secondItem="gVD-An-W5M" secondAttribute="trailing" constant="97" id="yKg-MH-Wmk"/>
+                </constraints>
+            </tableViewCellContentView>
+            <accessibility key="accessibilityConfiguration" identifier="cyclistCell"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="cyclistImage" destination="gVD-An-W5M" id="B5Y-Lh-9SF"/>
+                <outlet property="cyclistLeader" destination="E9u-30-ogI" id="NQG-Uf-ZHz"/>
+                <outlet property="cyclistName" destination="Zwc-16-8jJ" id="K4d-oB-ch7"/>
+                <outlet property="cyclistPopularity" destination="anM-au-TI9" id="CRm-rk-Pd5"/>
+            </connections>
+            <point key="canvasLocation" x="189.13043478260872" y="186.83035714285714"/>
+        </tableViewCell>
+    </objects>
+</document>

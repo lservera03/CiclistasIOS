@@ -17,10 +17,10 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        loadData()
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: "EventsTableViewCell", bundle: nil), forCellReuseIdentifier: "eventCell")
-        loadData()
     }
 
     
@@ -49,6 +49,14 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let event: Event = list![indexPath.row]
+        let eventDetail = EventDetailViewController()
+        
+        eventDetail.event = event
+        navigationController?.pushViewController(eventDetail, animated: true)
     }
 
 }

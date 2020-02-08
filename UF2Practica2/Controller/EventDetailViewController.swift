@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserDetailViewController: UIViewController {
+class EventDetailViewController: UIViewController {
 
     @IBOutlet weak var eventPicture: UIImageView!
     @IBOutlet weak var eventName: UILabel!
@@ -16,23 +16,25 @@ class UserDetailViewController: UIViewController {
     @IBOutlet weak var eventCountry: UILabel!
     @IBOutlet weak var eventStages: UILabel!
     @IBOutlet weak var eventKm: UILabel!
+    public var event: Event?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        loadData()
+    }
+    
+    func loadData(){
+        self.eventPicture.image = UIImage(named: "bici")
+        self.eventName.text = event?.name
+        self.eventPopularity.text = String(event!.popularity)
+        self.eventCountry.text = event?.country
+        self.eventStages.text = String(event!.numberStage)
+        self.eventKm.text = String(event!.stageKm)
     }
 
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

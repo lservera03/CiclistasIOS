@@ -13,13 +13,13 @@ import UIKit
 
 class Cyclist: Object{
     
-    @objc dynamic var id: Int = 0
-    @objc dynamic var team: Team? = Team()
+    //@objc dynamic var id: Int = 0
+    @objc dynamic var team: String = ""
     @objc dynamic var country: String = ""
-    @objc dynamic var specialty: Specialty? = Specialty()
+    @objc dynamic var specialty: String = ""
     @objc dynamic var lastName: String = ""
     @objc dynamic var firstName: String = ""
-    @objc dynamic var birthDate: Date = Date()
+    @objc dynamic var birthDate: String = ""
     @objc dynamic var popularity: Int = 0
     @objc dynamic var leader: Bool = false
     @objc dynamic var size: Double = 0.0
@@ -33,12 +33,12 @@ class Cyclist: Object{
     @objc dynamic var timeTrial: Int = 0
     
     
-    convenience init(id: Int, team: Team, country: String, specialty: Specialty, lastName: String,
-                     firstName: String, birthDate: Date, popularity:Int, leader:Bool, size: Double, weight: Double, mountain: Int, plain: Int, downhilling: Int, sprint: Int, resistance: Int, recuperation: Int, timeTrial: Int){
+    convenience init(team: String, country: String, specialty: String, lastName: String,
+                     firstName: String, birthDate: String, popularity:Int, leader:Bool, size: Double, weight: Double, mountain: Int, plain: Int, downhilling: Int, sprint: Int, resistance: Int, recuperation: Int, timeTrial: Int){
         
         self.init()
         
-        self.id = id
+        //self.id = id
         self.team = team
         self.country = country
         self.specialty = specialty

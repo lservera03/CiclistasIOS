@@ -66,6 +66,10 @@ class DBManager {
   func getEvents() -> Results<Event>? {
           return database?.objects(Event.self)
   }
+    
+  func getCyclists() -> Results<Cyclist>? {
+          return database?.objects(Cyclist.self)
+  }
   
     
     
