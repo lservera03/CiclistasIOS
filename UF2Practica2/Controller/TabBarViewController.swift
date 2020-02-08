@@ -18,8 +18,9 @@ class TabBarViewController: UITabBarController {
         self.tabBar.backgroundColor = UIColor.red
         
         loadViews()
-        //loadEvents()
-        //loadCyclists()
+        loadEvents()
+        loadCyclists()
+        loadTeams()
         
         self.selectedViewController = self.viewControllers?[0]
     }
@@ -37,8 +38,14 @@ class TabBarViewController: UITabBarController {
         itemCiclists.image = UIImage(named: "home_icon")
         ciclists.tabBarItem = itemCiclists
         
+        let teams = TeamsViewController()
+        let itemTeams = UITabBarItem()
+        itemTeams.title = "Teams"
+        itemTeams.image = UIImage(named: "home_icon")
+        teams.tabBarItem = itemTeams
         
-        self.viewControllers = [event, ciclists]
+        
+        self.viewControllers = [event, ciclists, teams]
     }
     
     
@@ -51,7 +58,11 @@ class TabBarViewController: UITabBarController {
         DBManager.sharedInstance.addData(object: Cyclist(team: "Movistar", country: "España", specialty: "Pedalear", lastName: "Contador", firstName: "Alberto", birthDate: "22/12/1990", popularity: 90, leader: true, size: 190, weight: 70, mountain: 20, plain: 50, downhilling: 10, sprint: 10, resistance: 70, recuperation: 25, timeTrial: 34))
         
         DBManager.sharedInstance.addData(object: Cyclist(team: "Amarillo", country: "Francia", specialty: "Molestar", lastName: "Croissant", firstName: "Françoise", birthDate: "22/12/1995", popularity: 80, leader: false, size: 190, weight: 70, mountain: 20, plain: 50, downhilling: 10, sprint: 10, resistance: 70, recuperation: 25, timeTrial: 34))
-        
+    }
+    
+    func loadTeams(){
+        DBManager.sharedInstance.addData(object: Team(country: "España", name: "Movistar", manager: "Marc Marzà"))
+        DBManager.sharedInstance.addData(object: Team(country: "Francia", name: "Eiffel", manager: "Romain Grosjean"))
     }
 
 

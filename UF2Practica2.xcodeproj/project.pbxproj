@@ -26,6 +26,12 @@
 		33FAE68123E87FB00044631F /* TeamRace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE68023E87FB00044631F /* TeamRace.swift */; };
 		33FAE68323E8801B0044631F /* Stage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE68223E8801B0044631F /* Stage.swift */; };
 		33FAE68523E880E80044631F /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FAE68423E880E80044631F /* DBManager.swift */; };
+		4352C6A423EF14EA007B72A7 /* CyclistDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4352C6A223EF14EA007B72A7 /* CyclistDetailViewController.swift */; };
+		4352C6A523EF14EA007B72A7 /* CyclistDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4352C6A323EF14EA007B72A7 /* CyclistDetailViewController.xib */; };
+		4352C6A823EF1669007B72A7 /* TeamsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4352C6A623EF1669007B72A7 /* TeamsViewController.swift */; };
+		4352C6A923EF1669007B72A7 /* TeamsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4352C6A723EF1669007B72A7 /* TeamsViewController.xib */; };
+		4352C6AC23EF1753007B72A7 /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4352C6AA23EF1753007B72A7 /* TeamTableViewCell.swift */; };
+		4352C6AD23EF1753007B72A7 /* TeamTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4352C6AB23EF1753007B72A7 /* TeamTableViewCell.xib */; };
 		43C0B24023EEF80300360250 /* CyclistsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43C0B23E23EEF80300360250 /* CyclistsTableViewCell.swift */; };
 		43C0B24123EEF80300360250 /* CyclistsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43C0B23F23EEF80300360250 /* CyclistsTableViewCell.xib */; };
 		43ED187623E58C5A00C31CBA /* EventsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43ED187423E58C5A00C31CBA /* EventsTableViewCell.swift */; };
@@ -59,6 +65,12 @@
 		33FAE68023E87FB00044631F /* TeamRace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamRace.swift; sourceTree = "<group>"; };
 		33FAE68223E8801B0044631F /* Stage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stage.swift; sourceTree = "<group>"; };
 		33FAE68423E880E80044631F /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		4352C6A223EF14EA007B72A7 /* CyclistDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclistDetailViewController.swift; sourceTree = "<group>"; };
+		4352C6A323EF14EA007B72A7 /* CyclistDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CyclistDetailViewController.xib; sourceTree = "<group>"; };
+		4352C6A623EF1669007B72A7 /* TeamsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewController.swift; sourceTree = "<group>"; };
+		4352C6A723EF1669007B72A7 /* TeamsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamsViewController.xib; sourceTree = "<group>"; };
+		4352C6AA23EF1753007B72A7 /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
+		4352C6AB23EF1753007B72A7 /* TeamTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamTableViewCell.xib; sourceTree = "<group>"; };
 		43C0B23E23EEF80300360250 /* CyclistsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclistsTableViewCell.swift; sourceTree = "<group>"; };
 		43C0B23F23EEF80300360250 /* CyclistsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CyclistsTableViewCell.xib; sourceTree = "<group>"; };
 		43ED187423E58C5A00C31CBA /* EventsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewCell.swift; sourceTree = "<group>"; };
@@ -136,6 +148,9 @@
 				16987306238D97D3007DD7D1 /* ViewController.xib */,
 				169F11B423A9A3CA0015E141 /* LoginViewController.xib */,
 				43C0B23F23EEF80300360250 /* CyclistsTableViewCell.xib */,
+				4352C6A323EF14EA007B72A7 /* CyclistDetailViewController.xib */,
+				4352C6A723EF1669007B72A7 /* TeamsViewController.xib */,
+				4352C6AB23EF1753007B72A7 /* TeamTableViewCell.xib */,
 			);
 			path = VIew;
 			sourceTree = "<group>";
@@ -143,6 +158,8 @@
 		33BF8FD823DF40C600161D03 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4352C6AA23EF1753007B72A7 /* TeamTableViewCell.swift */,
+				4352C6A223EF14EA007B72A7 /* CyclistDetailViewController.swift */,
 				43C0B23E23EEF80300360250 /* CyclistsTableViewCell.swift */,
 				33F850A123E9F79D00C5D599 /* EventDetailViewController.swift */,
 				169F11B323A9A3CA0015E141 /* LoginViewController.swift */,
@@ -151,6 +168,7 @@
 				43ED187423E58C5A00C31CBA /* EventsTableViewCell.swift */,
 				43ED187823E5908500C31CBA /* EventsViewController.swift */,
 				43ED187C23E590B400C31CBA /* CiclistsViewController.swift */,
+				4352C6A623EF1669007B72A7 /* TeamsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -243,6 +261,9 @@
 				43ED187F23E590B400C31CBA /* CiclistsViewController.xib in Resources */,
 				43ED187723E58C5A00C31CBA /* EventsTableViewCell.xib in Resources */,
 				33F850A423E9F79D00C5D599 /* EventDetailViewController.xib in Resources */,
+				4352C6A523EF14EA007B72A7 /* CyclistDetailViewController.xib in Resources */,
+				4352C6A923EF1669007B72A7 /* TeamsViewController.xib in Resources */,
+				4352C6AD23EF1753007B72A7 /* TeamTableViewCell.xib in Resources */,
 				43ED187B23E5908500C31CBA /* EventsViewController.xib in Resources */,
 				169872FF238D979F007DD7D1 /* LaunchScreen.storyboard in Resources */,
 				16987307238D97D3007DD7D1 /* ViewController.xib in Resources */,
@@ -327,14 +348,17 @@
 				33BF8FD923DF432600161D03 /* ViewController.swift in Sources */,
 				33FAE68123E87FB00044631F /* TeamRace.swift in Sources */,
 				33BF8FE623DF465E00161D03 /* TabBarViewController.swift in Sources */,
+				4352C6A423EF14EA007B72A7 /* CyclistDetailViewController.swift in Sources */,
 				43C0B24023EEF80300360250 /* CyclistsTableViewCell.swift in Sources */,
 				33FAE68323E8801B0044631F /* Stage.swift in Sources */,
 				33F850A323E9F79D00C5D599 /* EventDetailViewController.swift in Sources */,
 				43ED187623E58C5A00C31CBA /* EventsTableViewCell.swift in Sources */,
 				33FAE68523E880E80044631F /* DBManager.swift in Sources */,
 				169872F5238D979C007DD7D1 /* SceneDelegate.swift in Sources */,
+				4352C6AC23EF1753007B72A7 /* TeamTableViewCell.swift in Sources */,
 				33FAE67B23E87CC90044631F /* Specialty.swift in Sources */,
 				33FAE67D23E87D030044631F /* Cyclist.swift in Sources */,
+				4352C6A823EF1669007B72A7 /* TeamsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

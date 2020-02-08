@@ -71,6 +71,8 @@ class DBManager {
           return database?.objects(Cyclist.self)
   }
   
-    
+    func getTeams() -> Results<Team>? {
+            return database?.objects(Team.self)
+    }
     
 }

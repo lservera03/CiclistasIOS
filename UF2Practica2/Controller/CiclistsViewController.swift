@@ -11,7 +11,6 @@ import RealmSwift
 
 class CiclistsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    
 
     @IBOutlet weak var table: UITableView!
      var list: Results<Cyclist>? = nil
@@ -41,7 +40,7 @@ class CiclistsViewController: UIViewController, UITableViewDelegate, UITableView
         let cyclist: Cyclist = list![indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cyclistCell") as! CyclistsTableViewCell
         cell.cyclistImage.image = UIImage(named: "bici")
-        cell.cyclistName.text = cyclist.firstName
+        cell.cyclistName.text = cyclist.firstName + " " + cyclist.lastName
         cell.cyclistPopularity.text = String(cyclist.popularity)
         cell.cyclistLeader.text = String(cyclist.leader)
         return cell
@@ -49,6 +48,10 @@ class CiclistsViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
 
     
