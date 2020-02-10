@@ -19,6 +19,14 @@ class CyclistDetailViewController: UIViewController {
     @IBOutlet weak var cyclistHeight: UILabel!
     @IBOutlet weak var cyclistWeight: UILabel!
     @IBOutlet weak var cyclistSpeciality: UILabel!
+    @IBOutlet weak var cyclistMountain: UILabel!
+    @IBOutlet weak var cyclistPlain: UILabel!
+    @IBOutlet weak var cyclistDownhilling: UILabel!
+    @IBOutlet weak var cyclistSprint: UILabel!
+    @IBOutlet weak var cyclistResistence: UILabel!
+    @IBOutlet weak var cyclistRecuperation: UILabel!
+    @IBOutlet weak var cyclistTimeTrial: UILabel!
+    
     public var cyclist: Cyclist?
     
     override func viewDidLoad() {
@@ -41,6 +49,13 @@ class CyclistDetailViewController: UIViewController {
         self.cyclistHeight.text = String(cyclist!.size)
         self.cyclistWeight.text = String(cyclist!.weight)
         self.cyclistSpeciality.text = cyclist!.specialty
+        self.cyclistMountain.text = String(cyclist!.mountain)
+        self.cyclistPlain.text = String(cyclist!.sprint)
+        self.cyclistDownhilling.text = String(cyclist!.downhilling)
+        self.cyclistSprint.text = String(cyclist!.sprint)
+        self.cyclistResistence.text = String(cyclist!.resistance)
+        self.cyclistRecuperation.text = String(cyclist!.recuperation)
+        self.cyclistTimeTrial.text = String(cyclist!.timeTrial)
     }
 
 
