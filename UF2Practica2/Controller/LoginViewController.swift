@@ -37,7 +37,7 @@ class LoginViewController: UIViewController {
     
     @objc func receiveToggleAuthUINotification(_ notification: NSNotification) {
         print(notification.userInfo!)
-        let viewController = ViewController(nibName:String(describing: TabBarViewController.self), bundle: nil)
+        let viewController = TabBarViewController(nibName:String(describing: TabBarViewController.self), bundle: nil)
         navigationController?.pushViewController(viewController, animated: true)
     }
 

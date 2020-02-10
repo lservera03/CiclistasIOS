@@ -17,10 +17,14 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        loadData()
+        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(UINib(nibName: "EventsTableViewCell", bundle: nil), forCellReuseIdentifier: "eventCell")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loadData()
     }
 
     
