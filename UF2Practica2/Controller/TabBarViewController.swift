@@ -15,33 +15,34 @@ class TabBarViewController: UITabBarController {
         super.viewDidLoad()
             
         
-        self.tabBar.backgroundColor = UIColor.red
+        self.tabBar.backgroundColor = UIColor.blue
         
         loadViews()
-        loadEvents()
-        loadCyclists()
-        loadTeams()
         
+        navigationItem.hidesBackButton = true
         self.selectedViewController = self.viewControllers?[0]
     }
     
     func loadViews(){
         let event = EventsViewController()
         let itemEvent = UITabBarItem()
-        itemEvent.title = "Events"
-        itemEvent.image = UIImage(named: "home_icon")
+        //itemEvent.title = "Events"
+        itemEvent.image = UIImage(named: "eventIcon")
+        itemEvent.imageInsets = UIEdgeInsets(top: 15,left: 0,bottom: -15,right: 0)
         event.tabBarItem = itemEvent
         
         let ciclists = CiclistsViewController()
         let itemCiclists = UITabBarItem()
-        itemCiclists.title = "Ciclists"
-        itemCiclists.image = UIImage(named: "home_icon")
+        //itemCiclists.title = "Ciclists"
+        itemCiclists.image = UIImage(named: "ciclistaIcon")
+        itemCiclists.imageInsets = UIEdgeInsets(top: 15,left: 0,bottom: -15,right: 0)
         ciclists.tabBarItem = itemCiclists
         
         let teams = TeamsViewController()
         let itemTeams = UITabBarItem()
-        itemTeams.title = "Teams"
-        itemTeams.image = UIImage(named: "home_icon")
+        //itemTeams.title = "Teams"
+        itemTeams.image = UIImage(named: "teamIcon")
+        itemTeams.imageInsets = UIEdgeInsets(top: 15,left: 0,bottom: -15,right: 0)
         teams.tabBarItem = itemTeams
         
         
@@ -49,21 +50,7 @@ class TabBarViewController: UITabBarController {
     }
     
     
-    func loadEvents(){
-        DBManager.sharedInstance.addData(object: Event(country: "Espana", name: "Vuelta España", popularity: 10, numberStage: 2, stageKm: 23))
-        DBManager.sharedInstance.addData(object: Event(country: "Francia", name: "Tour de France", popularity: 30, numberStage: 2, stageKm: 23))
-    }
     
-    func loadCyclists(){
-        DBManager.sharedInstance.addData(object: Cyclist(team: "Movistar", country: "España", specialty: "Pedalear", lastName: "Contador", firstName: "Alberto", birthDate: "22/12/1990", popularity: 90, leader: true, size: 190, weight: 70, mountain: 20, plain: 50, downhilling: 10, sprint: 10, resistance: 70, recuperation: 25, timeTrial: 34))
-        
-        DBManager.sharedInstance.addData(object: Cyclist(team: "Amarillo", country: "Francia", specialty: "Molestar", lastName: "Croissant", firstName: "Françoise", birthDate: "22/12/1995", popularity: 80, leader: false, size: 190, weight: 70, mountain: 20, plain: 50, downhilling: 10, sprint: 10, resistance: 70, recuperation: 25, timeTrial: 34))
-    }
-    
-    func loadTeams(){
-        DBManager.sharedInstance.addData(object: Team(country: "España", name: "Movistar", manager: "Marc Marzà"))
-        DBManager.sharedInstance.addData(object: Team(country: "Francia", name: "Eiffel", manager: "Romain Grosjean"))
-    }
 
 
    

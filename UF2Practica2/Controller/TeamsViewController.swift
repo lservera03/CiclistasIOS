@@ -36,7 +36,7 @@ class TeamsViewController: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let team: Team = list![indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "teamCell") as! TeamTableViewCell
-        cell.teamImage.image = UIImage(named: "bici")
+        cell.teamImage.image = UIImage(named: "team")
         cell.teamName.text = team.name
         cell.teamManager.text = team.manager
         cell.teamCountry.text = team.country

@@ -44,7 +44,7 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         let event: Event = list![indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell") as! EventsTableViewCell
-        cell.eventImage.image = UIImage(named: "bici")
+        cell.eventImage.image = UIImage(named: "event")
         cell.eventName.text = event.name
         cell.eventPopularity.text = String(event.popularity)
         

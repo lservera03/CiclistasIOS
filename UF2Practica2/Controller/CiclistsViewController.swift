@@ -39,10 +39,14 @@ class CiclistsViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cyclist: Cyclist = list![indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cyclistCell") as! CyclistsTableViewCell
-        cell.cyclistImage.image = UIImage(named: "bici")
+        cell.cyclistImage.image = UIImage(named: "cyclist")
         cell.cyclistName.text = cyclist.firstName + " " + cyclist.lastName
         cell.cyclistPopularity.text = String(cyclist.popularity)
-        cell.cyclistLeader.text = String(cyclist.leader)
+        if(cyclist.leader){
+            cell.cyclistLeader.alpha = 1
+        }else{
+            cell.cyclistLeader.alpha = 0
+        }
         return cell
     }
     
@@ -51,7 +55,11 @@ class CiclistsViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cyclist: Cyclist = list![indexPath.row]
+        let cyclistDetail = CyclistDetailViewController()
         
+        cyclistDetail.cyclist = cyclist
+        navigationController?.pushViewController(cyclistDetail, animated: true)
     }
 
     
