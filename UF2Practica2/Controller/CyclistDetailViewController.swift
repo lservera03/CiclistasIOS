@@ -28,7 +28,7 @@ class CyclistDetailViewController: UIViewController {
     }
     
     func loadData(){
-        self.cyclistImage.image = UIImage(named: "bici")
+        self.cyclistImage.image = UIImage(named: "cyclist")
         self.cyclistName.text = cyclist!.firstName + " " + cyclist!.lastName
         if(cyclist!.leader){
             self.cyclistLeader.alpha = 1

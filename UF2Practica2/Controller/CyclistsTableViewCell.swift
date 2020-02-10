@@ -8,12 +8,18 @@
 
 import UIKit
 
+protocol ButtonDelegate{
+    func delegateMethod(posicion: Int)
+}
+
 class CyclistsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cyclistImage: UIImageView!
     @IBOutlet weak var cyclistName: UILabel!
     @IBOutlet weak var cyclistPopularity: UILabel!
     @IBOutlet weak var cyclistLeader: UILabel!
+    @IBOutlet weak var button: UIButton!
+    var delegate: ButtonDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -26,4 +32,7 @@ class CyclistsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func pulsado(_ sender: UIButton) {
+        delegate?.delegateMethod(posicion:sender.tag)
+    }
 }

@@ -38,6 +38,14 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FzV-CF-tb8">
+                        <rect key="frame" x="353" y="58" width="46" height="30"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" title="Button"/>
+                        <connections>
+                            <action selector="pulsado:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="iDz-p1-kPa"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="Zwc-16-8jJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="19" id="0UC-4T-rdL"/>
@@ -55,6 +63,7 @@
             <accessibility key="accessibilityConfiguration" identifier="cyclistCell"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="button" destination="FzV-CF-tb8" id="COq-Bo-5ep"/>
                 <outlet property="cyclistImage" destination="gVD-An-W5M" id="B5Y-Lh-9SF"/>
                 <outlet property="cyclistLeader" destination="E9u-30-ogI" id="NQG-Uf-ZHz"/>
                 <outlet property="cyclistName" destination="Zwc-16-8jJ" id="K4d-oB-ch7"/>

@@ -9,19 +9,25 @@
 import UIKit
 import RealmSwift
 
-class CiclistsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CiclistsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ButtonDelegate {
     
-
+    func delegateMethod(posicion: Int) {
+        deleteCyclist(posicion: posicion)
+    }
+    s
+    
     @IBOutlet weak var table: UITableView!
      var list: Results<Cyclist>? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         loadData()
         table.dataSource = self
         table.delegate = self
         table.register(UINib(nibName: "CyclistsTableViewCell", bundle: nil), forCellReuseIdentifier: "cyclistCell")
+        
     }
 
     func loadData(){
@@ -47,6 +53,7 @@ class CiclistsViewController: UIViewController, UITableViewDelegate, UITableView
         }else{
             cell.cyclistLeader.alpha = 0
         }
+        cell.button.tag = indexPath.row
         return cell
     }
     
@@ -60,6 +67,10 @@ class CiclistsViewController: UIViewController, UITableViewDelegate, UITableView
         
         cyclistDetail.cyclist = cyclist
         navigationController?.pushViewController(cyclistDetail, animated: true)
+    }
+    
+    func deleteCyclist(posicion: Int){
+        print(posicion)
     }
 
     

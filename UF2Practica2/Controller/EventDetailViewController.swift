@@ -26,7 +26,7 @@ class EventDetailViewController: UIViewController {
     }
     
     func loadData(){
-        self.eventPicture.image = UIImage(named: "bici")
+        self.eventPicture.image = UIImage(named: "event")
         self.eventName.text = event?.name
         self.eventPopularity.text = String(event!.popularity)
         self.eventCountry.text = event?.country
