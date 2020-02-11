@@ -9,23 +9,24 @@
 import UIKit
 
 class CyclistDetailViewController: UIViewController {
-
+    
     @IBOutlet weak var cyclistImage: UIImageView!
     @IBOutlet weak var cyclistLeader: UILabel!
-    @IBOutlet weak var cyclistName: UILabel!
-    @IBOutlet weak var cyclistAge: UILabel!
-    @IBOutlet weak var cyclistCountry: UILabel!
-    @IBOutlet weak var cyclistTeam: UILabel!
-    @IBOutlet weak var cyclistHeight: UILabel!
-    @IBOutlet weak var cyclistWeight: UILabel!
-    @IBOutlet weak var cyclistSpeciality: UILabel!
-    @IBOutlet weak var cyclistMountain: UILabel!
-    @IBOutlet weak var cyclistPlain: UILabel!
-    @IBOutlet weak var cyclistDownhilling: UILabel!
-    @IBOutlet weak var cyclistSprint: UILabel!
-    @IBOutlet weak var cyclistResistence: UILabel!
-    @IBOutlet weak var cyclistRecuperation: UILabel!
-    @IBOutlet weak var cyclistTimeTrial: UILabel!
+    @IBOutlet weak var cyclistName: UITextField!
+    @IBOutlet weak var cyclistAge: UITextField!
+    @IBOutlet weak var cyclistCountry: UITextField!
+    @IBOutlet weak var cyclistTeam: UITextField!
+    @IBOutlet weak var cyclistSize: UITextField!
+    @IBOutlet weak var cyclistWeight: UITextField!
+    @IBOutlet weak var cyclistSpeciality: UITextField!
+    @IBOutlet weak var cyclistMountain: UITextField!
+    @IBOutlet weak var cyclistPlain: UITextField!
+    @IBOutlet weak var cyclistDownhilling: UITextField!
+    @IBOutlet weak var cyclistSprint: UITextField!
+    @IBOutlet weak var cyclistResistance: UITextField!
+    @IBOutlet weak var cyclistRecuperation: UITextField!
+    @IBOutlet weak var cyclistTime: UITextField!
+    
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     
@@ -33,9 +34,11 @@ class CyclistDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        textFieldsUnabled()
         saveButton.isEnabled=false
         saveButton.alpha = 0
         editButton.setImage(UIImage(named: "editIcon"), for: .normal)
+        saveButton.setImage(UIImage(named: "saveIcon"), for: .normal)
         loadData()
     }
     
@@ -43,57 +46,75 @@ class CyclistDetailViewController: UIViewController {
         
         self.cyclistImage.image = UIImage(named: "cyclist")
         self.cyclistName.text = cyclist!.firstName + " " + cyclist!.lastName
+        self.cyclistAge.text = cyclist?.birthDate
+        self.cyclistCountry.text = cyclist?.country
+        self.cyclistTeam.text = cyclist?.team
+        self.cyclistSize.text = String(cyclist!.size)
+        self.cyclistWeight.text = String(cyclist!.weight)
+        self.cyclistSpeciality.text = cyclist?.specialty
+        self.cyclistMountain.text = String(cyclist!.mountain)
+        self.cyclistPlain.text = String(cyclist!.plain)
+        self.cyclistDownhilling.text = String(cyclist!.downhilling)
+        self.cyclistSprint.text = String(cyclist!.sprint)
+        self.cyclistResistance.text = String(cyclist!.resistance)
+        self.cyclistRecuperation.text = String(cyclist!.recuperation)
+        self.cyclistTime.text = String(cyclist!.timeTrial)
         if(cyclist!.leader){
             self.cyclistLeader.alpha = 1
         }else{
             self.cyclistLeader.alpha = 0
         }
-        self.cyclistAge.text = cyclist!.birthDate
-        self.cyclistCountry.text = cyclist!.country
-        self.cyclistTeam.text = cyclist!.team
-        self.cyclistHeight.text = String(cyclist!.size)
-        self.cyclistWeight.text = String(cyclist!.weight)
-        self.cyclistSpeciality.text = cyclist!.specialty
-        self.cyclistMountain.text = String(cyclist!.mountain)
-        self.cyclistPlain.text = String(cyclist!.sprint)
-        self.cyclistDownhilling.text = String(cyclist!.downhilling)
-        self.cyclistSprint.text = String(cyclist!.sprint)
-        self.cyclistResistence.text = String(cyclist!.resistance)
-        self.cyclistRecuperation.text = String(cyclist!.recuperation)
-        self.cyclistTimeTrial.text = String(cyclist!.timeTrial)
+        
     }
-
+    
     @IBAction func editCyclist(_ sender: UIButton) {
+        textFieldsEnabled()
         editButton.isEnabled=false
         editButton.alpha=0
         saveButton.alpha=1
         saveButton.isEnabled=true
-        self.cyclistAge.isEnabled=true
-        self.cyclistCountry.isEnabled=true
-        self.cyclistTeam.isEnabled=true
-        self.cyclistHeight.isEnabled=true
-        self.cyclistWeight.isEnabled=true
-        self.cyclistSpeciality.isEnabled=true
-        self.cyclistMountain.isEnabled=true
-        self.cyclistPlain.isEnabled=true
-        self.cyclistDownhilling.isEnabled=true
-        self.cyclistSprint.isEnabled=true
-        self.cyclistResistence.isEnabled=true
-        self.cyclistRecuperation.isEnabled=true
-        self.cyclistTimeTrial.isEnabled=true
+        
     }
     
     @IBAction func saveCyclist(_ sender: UIButton) {
+        cyclist?.firstName = cyclistName.text!
+        //cyclist?.lastName
         cyclist?.birthDate = cyclistAge.text!
         cyclist?.country = cyclistCountry.text!
         cyclist?.team = cyclistTeam.text!
-        cyclist?.size = Double(cyclistHeight.text!)!
+        cyclist?.size = Double(cyclistSize.text!)!
         cyclist?.weight = Double(cyclistWeight.text!)!
+        cyclist?.specialty = cyclistSpeciality.text!
+        cyclist?.mountain = Int(cyclistMountain.text!)!
+        cyclist?.plain = Int(cyclistPlain.text!)!
+        cyclist?.downhilling = Int(cyclistDownhilling.text!)!
+        cyclist?.sprint = Int(cyclistSprint.text!)!
+        cyclist?.resistance = Int(cyclistResistance.text!)!
+        cyclist?.recuperation = Int(cyclistRecuperation.text!)!
+        cyclist?.timeTrial = Int(cyclistTime.text!)!
+        DBManager.sharedInstance.addData(object: cyclist!)
+        editButton.isEnabled=true
+        editButton.alpha=1
+        saveButton.alpha=0
+        saveButton.isEnabled=false
+        textFieldsUnabled()
+    }
+    
+    func textFieldsUnabled(){
+        for case let text as UITextField in self.view.subviews{
+            text.isEnabled = false
+        }
+    }
+    
+    func textFieldsEnabled(){
+        for case let text as UITextField in self.view.subviews{
+            text.isEnabled = true
+        }
     }
     
     
     
-
     
-
+    
+    
 }
