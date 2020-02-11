@@ -9,70 +9,71 @@
 import RealmSwift
 
 class DBManager {
-  
-  private var database: Realm?
-  static let sharedInstance = DBManager()
-  
-  private init() {
-    do {
-      database = try Realm(configuration: Realm.Configuration())
-    } catch let error as NSError {
-      fatalError("Error opening realm: \(error)")
-    }
-  }
-  
-  //MARK: - ADD
-  
-  func addData(object: Object) {
     
-    do {
-      try database?.write {
-        database?.add(object)
-      }
-    } catch {
-      #if DEBUG
-        print("Could not write to database: ", error)
-      #endif
-    }
-  }
+    private var database: Realm?
+    static let sharedInstance = DBManager()
     
-  
-  
-  //MARK: - DELETE
-  
-  func deleteAllDatabase()  {
-    try! database?.write {
-      database?.deleteAll()
+    private init() {
+        do {
+            database = try Realm(configuration: Realm.Configuration())
+        } catch let error as NSError {
+            fatalError("Error opening realm: \(error)")
+        }
     }
-  }
-  
-  func deleteFromDb(object: Object) {
-    try! database?.write {
-      database?.delete(object)
+    
+    //MARK: - ADD
+    
+    func addData(object: Object) {
+        
+        do {
+            try database?.write {
+                database?.add(object)
+            }
+        } catch {
+            #if DEBUG
+            print("Could not write to database: ", error)
+            #endif
+        }
     }
-  }
-  
-  //MARK: - TRANSACTIONS
-  
-  func beginWriteTransaction() {
-    database?.beginWrite()
-  }
-  
-  func commitWriteTransaction() {
-    try? database?.commitWrite()
-  }
     
-  
-  func getEvents() -> Results<Event>? {
-          return database?.objects(Event.self)
-  }
     
-  func getCyclists() -> Results<Cyclist>? {
-          return database?.objects(Cyclist.self)
-  }
-  
+    
+    //MARK: - DELETE
+    
+    func deleteAllDatabase()  {
+        try! database?.write {
+            database?.deleteAll()
+        }
+    }
+    
+    func deleteFromDb(object: Object) {
+        try! database?.write {
+            database?.delete(object)
+        }
+    }
+    
+    //MARK: - TRANSACTIONS
+    
+    func beginWriteTransaction() {
+        database?.beginWrite()
+    }
+    
+    func commitWriteTransaction() {
+        try? database?.commitWrite()
+    }
+    
+    
+    func getEvents() -> Results<Event>? {
+        return database?.objects(Event.self)
+    }
+    
+    func getCyclists() -> Results<Cyclist>? {
+        return database?.objects(Cyclist.self)
+    }
+    
     func getTeams() -> Results<Team>? {
-            return database?.objects(Team.self)
+        return database?.objects(Team.self)
     }
     
+   
 }

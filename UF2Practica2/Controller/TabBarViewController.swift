@@ -49,8 +49,7 @@ class TabBarViewController: UITabBarController {
         self.viewControllers = [event, ciclists, teams]
     }
     
-    
-    
+   
 
 
    

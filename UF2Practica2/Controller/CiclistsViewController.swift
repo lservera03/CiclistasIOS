@@ -14,10 +14,10 @@ class CiclistsViewController: UIViewController, UITableViewDelegate, UITableView
     func delegateMethod(posicion: Int) {
         deleteCyclist(posicion: posicion)
     }
-    s
     
     @IBOutlet weak var table: UITableView!
      var list: Results<Cyclist>? = nil
+     var arrayRealm: Array<Cyclist> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,24 +27,26 @@ class CiclistsViewController: UIViewController, UITableViewDelegate, UITableView
         table.dataSource = self
         table.delegate = self
         table.register(UINib(nibName: "CyclistsTableViewCell", bundle: nil), forCellReuseIdentifier: "cyclistCell")
-        
     }
 
     func loadData(){
         if (!DBManager.sharedInstance.getCyclists()!.isEmpty){
             list = DBManager.sharedInstance.getCyclists()!
             list = list?.sorted(byKeyPath: "popularity", ascending: false)
+            arrayRealm = Array(list!)
         }
+        table.reloadData()
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return list!.count
+        return arrayRealm.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cyclist: Cyclist = list![indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cyclistCell") as! CyclistsTableViewCell
+        cell.delegate = self
         cell.cyclistImage.image = UIImage(named: "cyclist")
         cell.cyclistName.text = cyclist.firstName + " " + cyclist.lastName
         cell.cyclistPopularity.text = String(cyclist.popularity)
@@ -71,6 +73,9 @@ class CiclistsViewController: UIViewController, UITableViewDelegate, UITableView
     
     func deleteCyclist(posicion: Int){
         print(posicion)
+        DBManager.sharedInstance.deleteFromDb(object: arrayRealm[posicion])
+        arrayRealm.remove(at: posicion)
+        loadData()
     }
 
     
