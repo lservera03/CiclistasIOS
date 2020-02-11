@@ -12,7 +12,9 @@ class CyclistDetailViewController: UIViewController {
     
     @IBOutlet weak var cyclistImage: UIImageView!
     @IBOutlet weak var cyclistLeader: UILabel!
-    @IBOutlet weak var cyclistName: UITextField!
+    
+    @IBOutlet weak var cyclistFirstName: UITextField!
+    @IBOutlet weak var cyclistLastName: UITextField!
     @IBOutlet weak var cyclistAge: UITextField!
     @IBOutlet weak var cyclistCountry: UITextField!
     @IBOutlet weak var cyclistTeam: UITextField!
@@ -34,6 +36,7 @@ class CyclistDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         textFieldsUnabled()
         saveButton.isEnabled=false
         saveButton.alpha = 0
@@ -43,9 +46,9 @@ class CyclistDetailViewController: UIViewController {
     }
     
     func loadData(){
-        
         self.cyclistImage.image = UIImage(named: "cyclist")
-        self.cyclistName.text = cyclist!.firstName + " " + cyclist!.lastName
+        self.cyclistFirstName.text = cyclist!.firstName
+        self.cyclistLastName.text = cyclist!.lastName
         self.cyclistAge.text = cyclist?.birthDate
         self.cyclistCountry.text = cyclist?.country
         self.cyclistTeam.text = cyclist?.team
@@ -77,8 +80,9 @@ class CyclistDetailViewController: UIViewController {
     }
     
     @IBAction func saveCyclist(_ sender: UIButton) {
-        cyclist?.firstName = cyclistName.text!
-        //cyclist?.lastName
+        DBManager.sharedInstance.beginWriteTransaction()
+        cyclist?.firstName = cyclistFirstName.text!
+        cyclist?.lastName = cyclistLastName.text!
         cyclist?.birthDate = cyclistAge.text!
         cyclist?.country = cyclistCountry.text!
         cyclist?.team = cyclistTeam.text!
@@ -92,7 +96,8 @@ class CyclistDetailViewController: UIViewController {
         cyclist?.resistance = Int(cyclistResistance.text!)!
         cyclist?.recuperation = Int(cyclistRecuperation.text!)!
         cyclist?.timeTrial = Int(cyclistTime.text!)!
-        DBManager.sharedInstance.addData(object: cyclist!)
+        DBManager.sharedInstance.commitWriteTransaction()
+        saveCyclistDb()
         editButton.isEnabled=true
         editButton.alpha=1
         saveButton.alpha=0
@@ -110,6 +115,10 @@ class CyclistDetailViewController: UIViewController {
         for case let text as UITextField in self.view.subviews{
             text.isEnabled = true
         }
+    }
+    
+    func saveCyclistDb(){
+        DBManager.sharedInstance.addData(object: cyclist!)
     }
     
     

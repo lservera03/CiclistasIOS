@@ -12,10 +12,11 @@
                 <outlet property="cyclistAge" destination="SLX-UM-Ccs" id="CZR-ga-Mh7"/>
                 <outlet property="cyclistCountry" destination="BEn-WY-aIO" id="zNy-5R-I5J"/>
                 <outlet property="cyclistDownhilling" destination="i2F-Gu-AL7" id="hHm-2G-AKL"/>
+                <outlet property="cyclistFirstName" destination="Cnh-pe-TU6" id="1I2-BL-ugj"/>
                 <outlet property="cyclistImage" destination="2qT-8i-w2o" id="GkI-Nr-KOA"/>
+                <outlet property="cyclistLastName" destination="HZD-UZ-txh" id="uO7-Xd-PDZ"/>
                 <outlet property="cyclistLeader" destination="5yM-g6-gRb" id="03f-bX-lZQ"/>
                 <outlet property="cyclistMountain" destination="Zke-PR-tB4" id="E8K-J6-lR9"/>
-                <outlet property="cyclistName" destination="Cnh-pe-TU6" id="hrh-j0-OqS"/>
                 <outlet property="cyclistPlain" destination="KLB-FM-21f" id="AaO-U1-vfd"/>
                 <outlet property="cyclistRecuperation" destination="w7x-ZM-qyw" id="Q6v-qz-jk0"/>
                 <outlet property="cyclistResistance" destination="eyZ-e7-evG" id="lh6-ar-cNh"/>
@@ -39,15 +40,15 @@
                     <rect key="frame" x="42" y="50" width="283" height="149"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPp-oP-X5u">
-                    <rect key="frame" x="42" y="269" width="68" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IPp-oP-X5u">
+                    <rect key="frame" x="42" y="269" width="88" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oBH-8x-P7t">
-                    <rect key="frame" x="42" y="309" width="75" height="21"/>
+                    <rect key="frame" x="42" y="324" width="75" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
@@ -167,7 +168,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cnh-pe-TU6">
-                    <rect key="frame" x="195" y="264" width="97" height="34"/>
+                    <rect key="frame" x="204" y="236" width="97" height="34"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
@@ -240,6 +241,19 @@
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XBx-sI-BBj">
                     <rect key="frame" x="165" y="806" width="97" height="34"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Wp-OG-vv4">
+                    <rect key="frame" x="37" y="299" width="88" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HZD-UZ-txh">
+                    <rect key="frame" x="195" y="269" width="97" height="34"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>

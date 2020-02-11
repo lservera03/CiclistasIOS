@@ -34,6 +34,7 @@ class DBManager {
             print("Could not write to database: ", error)
             #endif
         }
+        
     }
     
     

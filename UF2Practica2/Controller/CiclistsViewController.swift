@@ -23,10 +23,14 @@ class CiclistsViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
 
         
-        loadData()
+        
         table.dataSource = self
         table.delegate = self
         table.register(UINib(nibName: "CyclistsTableViewCell", bundle: nil), forCellReuseIdentifier: "cyclistCell")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loadData()
     }
 
     func loadData(){
