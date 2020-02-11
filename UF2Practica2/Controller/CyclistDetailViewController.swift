@@ -26,16 +26,21 @@ class CyclistDetailViewController: UIViewController {
     @IBOutlet weak var cyclistResistence: UILabel!
     @IBOutlet weak var cyclistRecuperation: UILabel!
     @IBOutlet weak var cyclistTimeTrial: UILabel!
+    @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var saveButton: UIButton!
     
     public var cyclist: Cyclist?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        saveButton.isEnabled=false
+        saveButton.alpha = 0
+        editButton.setImage(UIImage(named: "editIcon"), for: .normal)
         loadData()
     }
     
     func loadData(){
+        
         self.cyclistImage.image = UIImage(named: "cyclist")
         self.cyclistName.text = cyclist!.firstName + " " + cyclist!.lastName
         if(cyclist!.leader){
@@ -58,6 +63,36 @@ class CyclistDetailViewController: UIViewController {
         self.cyclistTimeTrial.text = String(cyclist!.timeTrial)
     }
 
+    @IBAction func editCyclist(_ sender: UIButton) {
+        editButton.isEnabled=false
+        editButton.alpha=0
+        saveButton.alpha=1
+        saveButton.isEnabled=true
+        self.cyclistAge.isEnabled=true
+        self.cyclistCountry.isEnabled=true
+        self.cyclistTeam.isEnabled=true
+        self.cyclistHeight.isEnabled=true
+        self.cyclistWeight.isEnabled=true
+        self.cyclistSpeciality.isEnabled=true
+        self.cyclistMountain.isEnabled=true
+        self.cyclistPlain.isEnabled=true
+        self.cyclistDownhilling.isEnabled=true
+        self.cyclistSprint.isEnabled=true
+        self.cyclistResistence.isEnabled=true
+        self.cyclistRecuperation.isEnabled=true
+        self.cyclistTimeTrial.isEnabled=true
+    }
+    
+    @IBAction func saveCyclist(_ sender: UIButton) {
+        cyclist?.birthDate = cyclistAge.text!
+        cyclist?.country = cyclistCountry.text!
+        cyclist?.team = cyclistTeam.text!
+        cyclist?.size = Double(cyclistHeight.text!)!
+        cyclist?.weight = Double(cyclistWeight.text!)!
+    }
+    
+    
+    
 
     
 

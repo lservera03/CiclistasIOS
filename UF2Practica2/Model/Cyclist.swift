@@ -58,6 +58,5 @@ class Cyclist: Object{
         self.timeTrial = timeTrial
     }
     
-    
-    
+   
 }

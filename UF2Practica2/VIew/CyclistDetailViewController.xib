@@ -25,6 +25,8 @@
                 <outlet property="cyclistTeam" destination="Pm5-qg-c02" id="t7l-Nd-K3W"/>
                 <outlet property="cyclistTimeTrial" destination="t8f-Zs-FTF" id="HMe-d3-o9l"/>
                 <outlet property="cyclistWeight" destination="1Zp-FI-AZR" id="sya-ob-6Bp"/>
+                <outlet property="editButton" destination="3QJ-Fs-ldf" id="ES7-E0-1mp"/>
+                <outlet property="saveButton" destination="xWD-M5-pzK" id="px8-Z2-zNG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -241,6 +243,21 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3QJ-Fs-ldf">
+                    <rect key="frame" x="333" y="87" width="53" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <connections>
+                        <action selector="editCyclist:" destination="-1" eventType="touchUpInside" id="eJS-k6-tmZ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWD-M5-pzK">
+                    <rect key="frame" x="340" y="150" width="46" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="saveCyclist:" destination="-1" eventType="touchUpInside" id="N3r-MO-yNK"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
