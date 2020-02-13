@@ -21,8 +21,12 @@ class CyclistsTableViewCell: UITableViewCell {
     @IBOutlet weak var button: UIButton!
     var delegate: ButtonDelegate?
     
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+
         // Initialization code
     }
 
