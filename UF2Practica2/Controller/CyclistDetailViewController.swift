@@ -36,7 +36,8 @@ class CyclistDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        cyclistLeader.layer.cornerRadius = 50.0
+        cyclistLeader.layer.masksToBounds = true
         textFieldsUnabled()
         saveButton.isEnabled=false
         saveButton.alpha = 0

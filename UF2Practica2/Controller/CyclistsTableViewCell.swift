@@ -25,7 +25,8 @@ class CyclistsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+        cyclistLeader.layer.cornerRadius = 5.0
+        cyclistLeader.layer.masksToBounds = true
 
         // Initialization code
     }
