@@ -42,7 +42,10 @@ class CyclistDetailViewController: UIViewController {
         super.viewDidLoad()
         if(cyclist == nil){
             self.cyclistImage.image = UIImage(named: "cyclist")
+            cyclistLeader.layer.cornerRadius = 25.0
             saveButton.isEnabled=true
+            cyclistLeader.backgroundColor = UIColor.lightGray
+            cyclistLeader.alpha = 0.5
             saveButton.alpha = 1
             saveButton.setImage(UIImage(named: "saveIcon"), for: .normal)
         }else{
@@ -166,9 +169,11 @@ class CyclistDetailViewController: UIViewController {
     
     @IBAction func selectLeader(_ sender: UIButton) {
         if(sender.backgroundColor==UIColor.green){
-            sender.backgroundColor = UIColor(white: 1, alpha: 0.5)
+            sender.backgroundColor = UIColor.lightGray
+            sender.alpha = 0.5
         }else{
             sender.backgroundColor = UIColor.green
+            sender.alpha = 1
         }
     }
     
