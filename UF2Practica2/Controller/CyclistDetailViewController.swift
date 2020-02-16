@@ -35,7 +35,7 @@ class CyclistDetailViewController: UIViewController {
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     
-    public var cyclist: Cyclist?=nil
+    public var cyclist: Cyclist? = nil
     
     
     override func viewDidLoad() {
@@ -46,15 +46,15 @@ class CyclistDetailViewController: UIViewController {
             saveButton.alpha = 1
             saveButton.setImage(UIImage(named: "saveIcon"), for: .normal)
         }else{
-        cyclistLeader.isEnabled=false
-        cyclistLeader.layer.cornerRadius = 25.0
-        cyclistLeader.layer.masksToBounds = true
-        textFieldsUnabled()
-        saveButton.isEnabled=false
-        saveButton.alpha = 0
-        editButton.setImage(UIImage(named: "editIcon"), for: .normal)
-        saveButton.setImage(UIImage(named: "saveIcon"), for: .normal)
-        loadData()
+            cyclistLeader.isEnabled=false
+            cyclistLeader.layer.cornerRadius = 25.0
+            cyclistLeader.layer.masksToBounds = true
+            textFieldsUnabled()
+            saveButton.isEnabled=false
+            saveButton.alpha = 0
+            editButton.setImage(UIImage(named: "editIcon"), for: .normal)
+            saveButton.setImage(UIImage(named: "saveIcon"), for: .normal)
+            loadData()
         }
     }
     
@@ -89,32 +89,29 @@ class CyclistDetailViewController: UIViewController {
         editButton.alpha=0
         saveButton.alpha=1
         saveButton.isEnabled=true
-        
     }
     
     @IBAction func saveCyclist(_ sender: UIButton) {
         if(!checkTextField()){
-            
+            showFieldError()
         }else{
-            
-        
-        if(cyclist==nil){
-            cyclist = Cyclist()
-            dataCyclist()
-            saveCyclistDb()
-            navigationController?.popViewController(animated: true)
-            dismiss(animated: true, completion: nil)
-        }else{
-        DBManager.sharedInstance.beginWriteTransaction()
-        dataCyclist()
-        DBManager.sharedInstance.commitWriteTransaction()
-        saveCyclistDb()
-        editButton.isEnabled=true
-        editButton.alpha=1
-        saveButton.alpha=0
-        saveButton.isEnabled=false
-        textFieldsUnabled()
-        }
+            if(cyclist==nil){
+                cyclist = Cyclist()
+                dataCyclist()
+                saveCyclistDb()
+                navigationController?.popViewController(animated: true)
+                dismiss(animated: true, completion: nil)
+            }else{
+                DBManager.sharedInstance.beginWriteTransaction()
+                dataCyclist()
+                DBManager.sharedInstance.commitWriteTransaction()
+                saveCyclistDb()
+                editButton.isEnabled=true
+                editButton.alpha=1
+                saveButton.alpha=0
+                saveButton.isEnabled=false
+                textFieldsUnabled()
+            }
         }
     }
     
@@ -172,6 +169,18 @@ class CyclistDetailViewController: UIViewController {
             sender.backgroundColor = UIColor(white: 1, alpha: 0.5)
         }else{
             sender.backgroundColor = UIColor.green
+        }
+    }
+    
+    func showFieldError(){
+        let alert = UIAlertController(title: nil, message: "Fields can't be empty", preferredStyle: .alert)
+        
+        alert.view.backgroundColor = .black
+        alert.view.alpha = 0.5
+        alert.view.layer.cornerRadius = 15
+        self.present(alert, animated:true)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+            alert.dismiss(animated: true)
         }
     }
     

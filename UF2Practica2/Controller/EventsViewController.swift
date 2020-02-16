@@ -32,8 +32,7 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         if (!DBManager.sharedInstance.getEvents()!.isEmpty){
             list = DBManager.sharedInstance.getEvents()!
             list = list?.sorted(byKeyPath: "popularity", ascending: false)
-        }
-        
+        }        
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
