@@ -10,9 +10,12 @@ import UIKit
 
 class CyclistDetailViewController: UIViewController {
     
-    @IBOutlet weak var cyclistImage: UIImageView!
-    @IBOutlet weak var cyclistLeader: UILabel!
     
+    
+    @IBOutlet weak var cyclistLeader: UIButton!
+    
+    @IBOutlet weak var cyclistImage: UIImageView!
+
     @IBOutlet weak var cyclistFirstName: UITextField!
     @IBOutlet weak var cyclistLastName: UITextField!
     @IBOutlet weak var cyclistAge: UITextField!
@@ -32,10 +35,18 @@ class CyclistDetailViewController: UIViewController {
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
     
-    public var cyclist: Cyclist?
+    public var cyclist: Cyclist?=nil
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if(cyclist == nil){
+            self.cyclistImage.image = UIImage(named: "cyclist")
+            saveButton.isEnabled=true
+            saveButton.alpha = 1
+            saveButton.setImage(UIImage(named: "saveIcon"), for: .normal)
+        }else{
+        cyclistLeader.isEnabled=false
         cyclistLeader.layer.cornerRadius = 25.0
         cyclistLeader.layer.masksToBounds = true
         textFieldsUnabled()
@@ -44,6 +55,7 @@ class CyclistDetailViewController: UIViewController {
         editButton.setImage(UIImage(named: "editIcon"), for: .normal)
         saveButton.setImage(UIImage(named: "saveIcon"), for: .normal)
         loadData()
+        }
     }
     
     func loadData(){
@@ -64,15 +76,15 @@ class CyclistDetailViewController: UIViewController {
         self.cyclistRecuperation.text = String(cyclist!.recuperation)
         self.cyclistTime.text = String(cyclist!.timeTrial)
         if(cyclist!.leader){
-            self.cyclistLeader.alpha = 1
+            self.cyclistLeader.backgroundColor = UIColor.green
         }else{
-            self.cyclistLeader.alpha = 0
+            self.cyclistLeader.backgroundColor = UIColor(white: 1, alpha: 0.5)
         }
-        
     }
     
     @IBAction func editCyclist(_ sender: UIButton) {
         textFieldsEnabled()
+        cyclistLeader.isEnabled=true
         editButton.isEnabled=false
         editButton.alpha=0
         saveButton.alpha=1
@@ -81,7 +93,62 @@ class CyclistDetailViewController: UIViewController {
     }
     
     @IBAction func saveCyclist(_ sender: UIButton) {
+        if(!checkTextField()){
+            
+        }else{
+            
+        
+        if(cyclist==nil){
+            cyclist = Cyclist()
+            dataCyclist()
+            saveCyclistDb()
+            navigationController?.popViewController(animated: true)
+            dismiss(animated: true, completion: nil)
+        }else{
         DBManager.sharedInstance.beginWriteTransaction()
+        dataCyclist()
+        DBManager.sharedInstance.commitWriteTransaction()
+        saveCyclistDb()
+        editButton.isEnabled=true
+        editButton.alpha=1
+        saveButton.alpha=0
+        saveButton.isEnabled=false
+        textFieldsUnabled()
+        }
+        }
+    }
+    
+    func textFieldsUnabled(){
+        for case let text as UITextField in self.view.subviews{
+            text.isEnabled = false
+        }
+    }
+    
+    func textFieldsEnabled(){
+        for case let text as UITextField in self.view.subviews{
+            text.isEnabled = true
+        }
+    }
+    
+    func checkTextField()->Bool{
+        for case let text as UITextField in self.view.subviews{
+            if(text.text == ""){
+                return false
+            }
+        }
+        return true
+    }
+    
+    func saveCyclistDb(){
+        DBManager.sharedInstance.addData(object: cyclist!)
+    }
+    
+    func dataCyclist(){
+        if(cyclistLeader.backgroundColor==UIColor.green){
+            cyclist?.leader = true
+        }else{
+            cyclist?.leader=false
+        }
         cyclist?.firstName = cyclistFirstName.text!
         cyclist?.lastName = cyclistLastName.text!
         cyclist?.birthDate = cyclistAge.text!
@@ -97,32 +164,16 @@ class CyclistDetailViewController: UIViewController {
         cyclist?.resistance = Int(cyclistResistance.text!)!
         cyclist?.recuperation = Int(cyclistRecuperation.text!)!
         cyclist?.timeTrial = Int(cyclistTime.text!)!
-        DBManager.sharedInstance.commitWriteTransaction()
-        saveCyclistDb()
-        editButton.isEnabled=true
-        editButton.alpha=1
-        saveButton.alpha=0
-        saveButton.isEnabled=false
-        textFieldsUnabled()
+        
     }
     
-    func textFieldsUnabled(){
-        for case let text as UITextField in self.view.subviews{
-            text.isEnabled = false
+    @IBAction func selectLeader(_ sender: UIButton) {
+        if(sender.backgroundColor==UIColor.green){
+            sender.backgroundColor = UIColor(white: 1, alpha: 0.5)
+        }else{
+            sender.backgroundColor = UIColor.green
         }
     }
-    
-    func textFieldsEnabled(){
-        for case let text as UITextField in self.view.subviews{
-            text.isEnabled = true
-        }
-    }
-    
-    func saveCyclistDb(){
-        DBManager.sharedInstance.addData(object: cyclist!)
-    }
-    
-    
     
     
     

@@ -15,15 +15,14 @@ class CiclistsViewController: UIViewController, UITableViewDelegate, UITableView
         deleteCyclist(posicion: posicion)
     }
     
+    @IBOutlet weak var buttonAdd: UIButton!
+    
     @IBOutlet weak var table: UITableView!
      var list: Results<Cyclist>? = nil
      var arrayRealm: Array<Cyclist> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
-        
         table.dataSource = self
         table.delegate = self
         table.register(UINib(nibName: "CyclistsTableViewCell", bundle: nil), forCellReuseIdentifier: "cyclistCell")
@@ -82,6 +81,10 @@ class CiclistsViewController: UIViewController, UITableViewDelegate, UITableView
         loadData()
     }
 
+    @IBAction func cyclistAdd(_ sender: UIButton) {
+        let cyclistDetail = CyclistDetailViewController()
+        navigationController?.pushViewController(cyclistDetail, animated: true)
+    }
     
 
 }
