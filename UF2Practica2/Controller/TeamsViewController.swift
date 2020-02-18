@@ -20,6 +20,7 @@ class TeamsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         loadData()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.tableFooterView = UIView()
         tableView.register(UINib(nibName: "TeamTableViewCell", bundle: nil), forCellReuseIdentifier: "teamCell")
     }
     

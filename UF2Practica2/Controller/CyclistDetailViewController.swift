@@ -40,6 +40,7 @@ class CyclistDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         if(cyclist == nil){
             self.cyclistImage.image = UIImage(named: "cyclist")
             cyclistLeader.layer.cornerRadius = 25.0
@@ -81,11 +82,13 @@ class CyclistDetailViewController: UIViewController {
         if(cyclist!.leader){
             self.cyclistLeader.backgroundColor = UIColor.green
         }else{
-            self.cyclistLeader.backgroundColor = UIColor(white: 1, alpha: 0.5)
+            self.cyclistLeader.backgroundColor = UIColor.lightGray
+            self.cyclistLeader.alpha = 0.5
         }
     }
     
     @IBAction func editCyclist(_ sender: UIButton) {
+        navigationItem.hidesBackButton = true
         textFieldsEnabled()
         cyclistLeader.isEnabled=true
         editButton.isEnabled=false
@@ -98,6 +101,7 @@ class CyclistDetailViewController: UIViewController {
         if(!checkTextField()){
             showFieldError()
         }else{
+            navigationItem.hidesBackButton = false
             if(cyclist==nil){
                 cyclist = Cyclist()
                 dataCyclist()
@@ -113,6 +117,7 @@ class CyclistDetailViewController: UIViewController {
                 editButton.alpha=1
                 saveButton.alpha=0
                 saveButton.isEnabled=false
+                cyclistLeader.isEnabled = false
                 textFieldsUnabled()
             }
         }

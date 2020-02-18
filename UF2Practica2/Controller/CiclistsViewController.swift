@@ -9,22 +9,24 @@
 import UIKit
 import RealmSwift
 
-class CiclistsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ButtonDelegate {
+class CiclistsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ButtonDelegate  {
     
     func delegateMethod(posicion: Int) {
         deleteCyclist(posicion: posicion)
     }
     
-    @IBOutlet weak var buttonAdd: UIButton!
-    
+    @IBAction func buttonAdd(_ sender: Any) {
+    }
     @IBOutlet weak var table: UITableView!
      var list: Results<Cyclist>? = nil
      var arrayRealm: Array<Cyclist> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         table.dataSource = self
         table.delegate = self
+        table.tableFooterView = UIView()
         table.register(UINib(nibName: "CyclistsTableViewCell", bundle: nil), forCellReuseIdentifier: "cyclistCell")
     }
     
@@ -81,10 +83,9 @@ class CiclistsViewController: UIViewController, UITableViewDelegate, UITableView
         loadData()
     }
 
-    @IBAction func cyclistAdd(_ sender: UIButton) {
-        let cyclistDetail = CyclistDetailViewController()
-        navigationController?.pushViewController(cyclistDetail, animated: true)
+    @IBAction func addCyclist(_ sender: UIButton) {
+        let detailCyclist = CyclistDetailViewController()
+        navigationController?.pushViewController(detailCyclist, animated: true)
     }
     
-
 }
