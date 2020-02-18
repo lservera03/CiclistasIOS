@@ -15,8 +15,7 @@ class CiclistsViewController: UIViewController, UITableViewDelegate, UITableView
         deleteCyclist(posicion: posicion)
     }
     
-    @IBAction func buttonAdd(_ sender: Any) {
-    }
+    @IBOutlet weak var buttonAdd: UIButton!
     @IBOutlet weak var table: UITableView!
      var list: Results<Cyclist>? = nil
      var arrayRealm: Array<Cyclist> = []

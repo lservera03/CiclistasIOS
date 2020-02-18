@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CiclistsViewController" customModule="UF2Practica2" customModuleProvider="target">
             <connections>
+                <outlet property="buttonAdd" destination="0am-Fv-6Pw" id="5Rh-cd-SM7"/>
                 <outlet property="table" destination="Spb-5i-n5D" id="CIi-Mq-xQe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
