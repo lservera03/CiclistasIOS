@@ -24,6 +24,9 @@ class TeamsViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.register(UINib(nibName: "TeamTableViewCell", bundle: nil), forCellReuseIdentifier: "teamCell")
     }
     
+    /*
+     Metodo que permite cargar de la base de datos todos los equipos
+     */
     func loadData(){
         if (!DBManager.sharedInstance.getTeams()!.isEmpty){
             list = DBManager.sharedInstance.getTeams()!

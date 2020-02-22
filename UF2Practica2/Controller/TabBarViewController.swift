@@ -23,6 +23,9 @@ class TabBarViewController: UITabBarController {
         self.selectedViewController = self.viewControllers?[0]
     }
     
+    /*
+     Metodo que permite cargar en la tabbar las views necesarias 
+     */
     func loadViews(){
         let event = EventsViewController()
         let itemEvent = UITabBarItem()

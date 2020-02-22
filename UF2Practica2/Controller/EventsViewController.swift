@@ -27,7 +27,9 @@ class EventsViewController: UIViewController, UITableViewDelegate, UITableViewDa
         loadData()
     }
 
-    
+    /*
+     Metodo que permite cargar de la base de datos la informacion de los eventos
+     */
     func loadData(){
         if (!DBManager.sharedInstance.getEvents()!.isEmpty){
             list = DBManager.sharedInstance.getEvents()!

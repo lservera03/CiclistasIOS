@@ -25,6 +25,9 @@ class EventDetailViewController: UIViewController {
         loadData()
     }
     
+    /*
+     Metodo que permite cargar la información del evento en los label
+     */
     func loadData(){
         self.eventPicture.image = UIImage(named: "event")
         self.eventName.text = event?.name

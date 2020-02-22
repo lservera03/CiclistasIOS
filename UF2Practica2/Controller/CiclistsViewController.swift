@@ -11,6 +11,9 @@ import RealmSwift
 
 class CiclistsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, ButtonDelegate  {
     
+    /*
+     Metodo implementado del protocolo delegado
+     */
     func delegateMethod(posicion: Int) {
         deleteCyclist(posicion: posicion)
     }
@@ -33,6 +36,9 @@ class CiclistsViewController: UIViewController, UITableViewDelegate, UITableView
         loadData()
     }
 
+    /*
+     Metodo que permite cargar de la base de datos todos los ciclistas
+     */
     func loadData(){
         if (!DBManager.sharedInstance.getCyclists()!.isEmpty){
             list = DBManager.sharedInstance.getCyclists()!
@@ -75,6 +81,9 @@ class CiclistsViewController: UIViewController, UITableViewDelegate, UITableView
         navigationController?.pushViewController(cyclistDetail, animated: true)
     }
     
+    /*
+     Metodo que permite borrar un ciclista de la base de datos
+     */
     func deleteCyclist(posicion: Int){
         print(posicion)
         DBManager.sharedInstance.deleteFromDb(object: arrayRealm[posicion])
@@ -82,6 +91,9 @@ class CiclistsViewController: UIViewController, UITableViewDelegate, UITableView
         loadData()
     }
 
+    /*
+     Metodo que se ejecuta al pulsar el boton de añadir ciclista
+     */
     @IBAction func addCyclist(_ sender: UIButton) {
         let detailCyclist = CyclistDetailViewController()
         navigationController?.pushViewController(detailCyclist, animated: true)

@@ -62,6 +62,9 @@ class CyclistDetailViewController: UIViewController {
         }
     }
     
+    /*
+     Metodo que permite cargar la información de el ciclista en los campos
+     */
     func loadData(){
         self.cyclistImage.image = UIImage(named: "cyclist")
         self.cyclistFirstName.text = cyclist!.firstName
@@ -87,6 +90,9 @@ class CyclistDetailViewController: UIViewController {
         }
     }
     
+    /*
+     Metodo que se ejecuta al editar un ciclista
+     */
     @IBAction func editCyclist(_ sender: UIButton) {
         navigationItem.hidesBackButton = true
         textFieldsEnabled()
@@ -97,6 +103,9 @@ class CyclistDetailViewController: UIViewController {
         saveButton.isEnabled=true
     }
     
+    /*
+     Metodo que se ejecuta al pulsar el boton de guardar la información
+     */
     @IBAction func saveCyclist(_ sender: UIButton) {
         if(!checkTextField()){
             showFieldError()
@@ -123,18 +132,27 @@ class CyclistDetailViewController: UIViewController {
         }
     }
     
+    /*
+    Metodo que permite desactivar todos los campos
+    */
     func textFieldsUnabled(){
         for case let text as UITextField in self.view.subviews{
             text.isEnabled = false
         }
     }
     
+    /*
+     Metodo que permite activar todos los campos
+     */
     func textFieldsEnabled(){
         for case let text as UITextField in self.view.subviews{
             text.isEnabled = true
         }
     }
     
+    /*
+     Metodo que permite comprobar si hay algun campo vacio
+     */
     func checkTextField()->Bool{
         for case let text as UITextField in self.view.subviews{
             if(text.text == ""){
@@ -144,10 +162,16 @@ class CyclistDetailViewController: UIViewController {
         return true
     }
     
+    /*
+     Metodo que permite guardar un ciclista en la base de datos
+     */
     func saveCyclistDb(){
         DBManager.sharedInstance.addData(object: cyclist!)
     }
     
+    /*
+     Metodo que permite recolectar la informacion de los campos y setearsela al ciclista
+     */
     func dataCyclist(){
         if(cyclistLeader.backgroundColor==UIColor.green){
             cyclist?.leader = true
@@ -172,6 +196,9 @@ class CyclistDetailViewController: UIViewController {
         
     }
     
+    /*
+     Metodo que se ejecuta al pulsar el boton de leader
+     */
     @IBAction func selectLeader(_ sender: UIButton) {
         if(sender.backgroundColor==UIColor.green){
             sender.backgroundColor = UIColor.lightGray
@@ -182,6 +209,9 @@ class CyclistDetailViewController: UIViewController {
         }
     }
     
+    /*
+     Metodo que permite mostrar un error diciendo que hay algun campo vacio
+     */
     func showFieldError(){
         let alert = UIAlertController(title: nil, message: "Fields can't be empty", preferredStyle: .alert)
         
