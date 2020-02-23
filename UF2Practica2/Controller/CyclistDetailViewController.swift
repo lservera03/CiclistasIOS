@@ -53,7 +53,7 @@ class CyclistDetailViewController: UIViewController {
             cyclistLeader.isEnabled=false
             cyclistLeader.layer.cornerRadius = 25.0
             cyclistLeader.layer.masksToBounds = true
-            textFieldsUnabled()
+            textFieldsDisabled()
             saveButton.isEnabled=false
             saveButton.alpha = 0
             editButton.setImage(UIImage(named: "editIcon"), for: .normal)
@@ -127,7 +127,7 @@ class CyclistDetailViewController: UIViewController {
                 saveButton.alpha=0
                 saveButton.isEnabled=false
                 cyclistLeader.isEnabled = false
-                textFieldsUnabled()
+                textFieldsDisabled()
             }
         }
     }
@@ -135,7 +135,7 @@ class CyclistDetailViewController: UIViewController {
     /*
     Metodo que permite desactivar todos los campos
     */
-    func textFieldsUnabled(){
+    func textFieldsDisabled(){
         for case let text as UITextField in self.view.subviews{
             text.isEnabled = false
         }
