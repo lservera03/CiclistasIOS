@@ -85,7 +85,6 @@ class CiclistsViewController: UIViewController, UITableViewDelegate, UITableView
      Metodo que permite borrar un ciclista de la base de datos
      */
     func deleteCyclist(posicion: Int){
-        print(posicion)
         DBManager.sharedInstance.deleteFromDb(object: arrayRealm[posicion])
         arrayRealm.remove(at: posicion)
         loadData()
